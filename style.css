@@ -96,7 +96,7 @@ a {
     left: -16.5px;
     bottom: -2px;
     transform: rotate(-45deg) scaleX(-1);
-    animation: bubbleleft 0.1s ease 0.1s;
+    animation: bubbleleft 0.4s ease 0.2s;
     animation-fill-mode: forwards;
     animation-delay: 0.4s;
     fill: #e5e4e9;
@@ -173,6 +173,7 @@ a {
     display: flex;
     align-self: flex-start;
     margin-top: 50px;
+    transition: 1s all;
 }
 
 .gallery-block .box {
@@ -198,17 +199,14 @@ a {
 
 .gallery-block-home-group {
     position: relative;
-    transition: 1s all;
 }
 
 .gallery-block-show-me-your-work {
     position: relative;
-    transition: 1s all;
 }
 
 .gallery-block-smooth-animation{
     position: relative;
-    transition: 1s all;
 }
 
 .button-group {
