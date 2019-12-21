@@ -85,29 +85,32 @@ emergence.init({
 });
 
 function createGallery(selector, horizontalAlign) {
-    const _horizontalAlign = horizontalAlign == 'right' ? horizontalAlign : 'left';
     const galleryBlockHomeGroup = document.querySelector(selector);
-    galleryBlockHomeGroup.style.position = 'relative';
-    const galleryBlockHomeGroupChildrenCount = galleryBlockHomeGroup.childElementCount;
-    const galleryBlockHomeGroupChildrenOffsetWidth = galleryBlockHomeGroup.offsetWidth;
-    const galleryBlockHomeGroupChildrenOffset = (galleryBlockHomeGroupChildrenCount * (galleryBlockHomeGroupChildrenOffsetWidth / galleryBlockHomeGroupChildrenCount)) / 1.5;
-    galleryBlockHomeGroup.style[_horizontalAlign] = -galleryBlockHomeGroupChildrenOffset + 'px';
-    let galleryBlockHomeGroupStep = 0;
-
-    galleryBlockHomeGroup.addEventListener('click', () => {
-        const galleryBlockHomeGroupPos = parseInt(galleryBlockHomeGroup.style[_horizontalAlign].replace('px', ''));
-        galleryBlockHomeGroupStep++;
-        if (galleryBlockHomeGroupStep >= galleryBlockHomeGroupChildrenCount) {
-            galleryBlockHomeGroup.style[_horizontalAlign] = -galleryBlockHomeGroupChildrenOffset + 'px'
-            galleryBlockHomeGroupStep = 0;
-        } else {
-            if (galleryBlockHomeGroupStep == galleryBlockHomeGroupChildrenCount - 1) {
-                galleryBlockHomeGroup.style[_horizontalAlign] = '0px';
+    if(!galleryBlockHomeGroup.classList.contains('gallery-active')){
+        const _horizontalAlign = horizontalAlign == 'right' ? horizontalAlign : 'left';
+        galleryBlockHomeGroup.classList.add('gallery-active');
+        galleryBlockHomeGroup.style.position = 'relative';
+        const galleryBlockHomeGroupChildrenCount = galleryBlockHomeGroup.childElementCount;
+        const galleryBlockHomeGroupChildrenClientWidth = galleryBlockHomeGroup.clientWidth;
+        const galleryBlockHomeGroupChildrenOffset = (galleryBlockHomeGroupChildrenCount * (galleryBlockHomeGroupChildrenClientWidth / galleryBlockHomeGroupChildrenCount)) / 1.5;
+        galleryBlockHomeGroup.style[_horizontalAlign] = -galleryBlockHomeGroupChildrenOffset + 'px';
+        let galleryBlockHomeGroupStep = 0;
+    
+        galleryBlockHomeGroup.addEventListener('click', () => {
+            const galleryBlockHomeGroupPos = parseInt(galleryBlockHomeGroup.style[_horizontalAlign].replace('px', ''));
+            galleryBlockHomeGroupStep++;
+            if (galleryBlockHomeGroupStep >= galleryBlockHomeGroupChildrenCount) {
+                galleryBlockHomeGroup.style[_horizontalAlign] = -galleryBlockHomeGroupChildrenOffset + 'px'
+                galleryBlockHomeGroupStep = 0;
             } else {
-                galleryBlockHomeGroup.style[_horizontalAlign] = (galleryBlockHomeGroupPos) + (galleryBlockHomeGroupChildrenOffsetWidth / galleryBlockHomeGroupChildrenCount) + 'px';
+                if (galleryBlockHomeGroupStep == galleryBlockHomeGroupChildrenCount - 1) {
+                    galleryBlockHomeGroup.style[_horizontalAlign] = '0px';
+                } else {
+                    galleryBlockHomeGroup.style[_horizontalAlign] = (galleryBlockHomeGroupPos) + (galleryBlockHomeGroupChildrenClientWidth / galleryBlockHomeGroupChildrenCount) + 'px';
+                }
             }
-        }
-    });
+        });
+    }
 }
 
 function getScrollPosition() {
