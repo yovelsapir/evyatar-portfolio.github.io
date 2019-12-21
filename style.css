@@ -68,10 +68,6 @@ a {
         transform: rotate(-45deg) scaleX(-1)
     }
 
-    33% {
-        opacity: 1
-    }
-
     100% {
         opacity: 1;
         transform: rotate(0) scaleX(-1)
