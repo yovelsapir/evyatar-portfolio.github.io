@@ -65,7 +65,7 @@ a {
 @keyframes bubbleleft {
     0% {
         opacity: 0;
-        transform: rotate(-180deg) scaleX(-1)
+        transform: rotate(-45deg) scaleX(-1)
     }
 
     33% {
@@ -81,11 +81,7 @@ a {
 @keyframes bubbleRight {
     0% {
         opacity: 0;
-        transform: rotate(180deg) scaleX(1)
-    }
-
-    33% {
-        opacity: 1
+        transform: rotate(45deg) scaleX(1)
     }
 
     100% {
@@ -99,7 +95,7 @@ a {
     left: -16.5px;
     bottom: -2px;
     transform: rotate(-45deg) scaleX(-1);
-    animation: bubbleleft 0.4s ease 0.2s;
+    animation: bubbleleft 0.1s ease 0.1s;
     animation-fill-mode: forwards;
     animation-delay: 0.4s;
     fill: #e5e4e9;
@@ -110,7 +106,7 @@ a {
     position: absolute;
     right: -16.5px;
     bottom: -2px;
-    transform: rotate(-45deg) scaleX(1);
+    transform: rotate(45deg) scaleX(1);
     animation: bubbleRight 0.4s ease 0.2s;
     animation-fill-mode: forwards;
     animation-delay: 0.4s;
