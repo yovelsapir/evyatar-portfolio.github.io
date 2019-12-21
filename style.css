@@ -65,24 +65,28 @@ a {
 @keyframes bubbleleft {
     0% {
         opacity: 0;
-        transform: rotate(-45deg) scaleX(-1)
+        transform: rotate(-45deg) scaleX(-1);
+        left: -4.5px;
     }
 
     100% {
         opacity: 1;
-        transform: rotate(0) scaleX(-1)
+        transform: rotate(0) scaleX(-1);
+        left: -16.5px;
     }
 }
 
 @keyframes bubbleRight {
     0% {
         opacity: 0;
-        transform: rotate(45deg) scaleX(1)
+        transform: rotate(45deg) scaleX(1);
+        right: -4.5px;
     }
 
     100% {
         opacity: 1;
-        transform: rotate(0) scaleX(1)
+        transform: rotate(0) scaleX(1);
+        right: -16.5px;
     }
 }
 
