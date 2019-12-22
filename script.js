@@ -21,8 +21,8 @@ document.querySelectorAll('.group-container').forEach((el, i) => el.style.order 
 document.querySelector(`#${HOME_GROUP} .show-me-your-work-btn`).addEventListener('click', () => {
     showPage(WORK_GROUP, 1);
     document.querySelector(`#${HOME_GROUP} .what-you-can-do-btn`).remove();
+    document.querySelector(`#${HOME_GROUP} .show-me-your-work-btn`).remove();
     createGallery('.gallery-block-show-me-your-work');
-
 
     const whatYouCanDoButton = createButton("What you can do?", '#what-you-can-do-group', WORK_GROUP);
     const smoothAnimationButton = createButton("Show me smooth animations", '#smooth-animation-group', WORK_GROUP);
@@ -30,15 +30,18 @@ document.querySelector(`#${HOME_GROUP} .show-me-your-work-btn`).addEventListener
     if (whatYouCanDoButton) {
         whatYouCanDoButton.addEventListener('click', () => {
             removeButton(smoothAnimationButton);
+            removeButton(whatYouCanDoButton);
             showPage(WHAT_YOU_CAN_DO_GROUP, 2);
             const w_smoothAnimationButton = createButton("Show me smooth animations", '#smooth-animation-group', WHAT_YOU_CAN_DO_GROUP);
             if (w_smoothAnimationButton) {
                 w_smoothAnimationButton.addEventListener('click', () => {
+                    removeButton(w_smoothAnimationButton);
                     showPage(SMOOTH_ANIMATION_GROUP, 3);
                     createGallery('.gallery-block-smooth-animation');
                     const w_contactInfoButton = createButton("Contact info", '#contact-group', SMOOTH_ANIMATION_GROUP);
                     if (w_contactInfoButton) {
                         w_contactInfoButton.addEventListener('click', () => {
+                            removeButton(w_contactInfoButton);
                             showPage(CONTACT_GROUP, 4);
                         });
                     }
@@ -50,16 +53,19 @@ document.querySelector(`#${HOME_GROUP} .show-me-your-work-btn`).addEventListener
     if (smoothAnimationButton) {
         smoothAnimationButton.addEventListener('click', () => {
             removeButton(whatYouCanDoButton);
+            removeButton(smoothAnimationButton);
             showPage(SMOOTH_ANIMATION_GROUP, 2);
             createGallery('.gallery-block-smooth-animation');
 
             const s_whatYouCanDoButton = createButton("What you can do?", '#what-you-can-do-group', SMOOTH_ANIMATION_GROUP);
             if (s_whatYouCanDoButton) {
                 s_whatYouCanDoButton.addEventListener('click', () => {
+                    removeButton(s_whatYouCanDoButton);
                     showPage(WHAT_YOU_CAN_DO_GROUP, 3);
                     const s_contactInfoButton = createButton("Contact info", '#contact-group', WHAT_YOU_CAN_DO_GROUP);
                     if (s_contactInfoButton) {
                         s_contactInfoButton.addEventListener('click', () => {
+                            removeButton(s_contactInfoButton);
                             showPage(CONTACT_GROUP, 4);
                         });
                     }
@@ -72,21 +78,25 @@ document.querySelector(`#${HOME_GROUP} .show-me-your-work-btn`).addEventListener
 document.querySelector(`#${HOME_GROUP} .what-you-can-do-btn`).addEventListener('click', () => {
     showPage(WHAT_YOU_CAN_DO_GROUP, 1);
     document.querySelector(`#${HOME_GROUP} .show-me-your-work-btn`).remove();
+    document.querySelector(`#${HOME_GROUP} .what-you-can-do-btn`).remove();
 
     const showMeYourWorkButton = createButton("Show me Your work", '#show-me-your-work-group', WHAT_YOU_CAN_DO_GROUP);
     const smoothAnimationButton = createButton("Show me smooth animations", '#smooth-animation-group', WHAT_YOU_CAN_DO_GROUP);
 
     showMeYourWorkButton.addEventListener('click', () => {
         removeButton(smoothAnimationButton);
+        removeButton(showMeYourWorkButton);
         showPage(WORK_GROUP, 2);
         createGallery('.gallery-block-show-me-your-work');
 
         const w_smoothAnimationButton = createButton("Show me smooth animations", '#smooth-animation-group', WORK_GROUP);
         w_smoothAnimationButton.addEventListener('click', () => {
+            removeButton(w_smoothAnimationButton);
             showPage(SMOOTH_ANIMATION_GROUP, 3);
             createGallery('.gallery-block-smooth-animation');
             const w_contactInfoButton = createButton("Contact info", '#contact-group', SMOOTH_ANIMATION_GROUP);
             w_contactInfoButton.addEventListener('click', () => {
+                removeButton(w_contactInfoButton);
                 showPage(CONTACT_GROUP, 4);
             });
         });
@@ -95,16 +105,19 @@ document.querySelector(`#${HOME_GROUP} .what-you-can-do-btn`).addEventListener('
 
     smoothAnimationButton.addEventListener('click', () => {
         removeButton(showMeYourWorkButton);
+        removeButton(smoothAnimationButton);
         showPage(SMOOTH_ANIMATION_GROUP, 2);
         createGallery('.gallery-block-smooth-animation');
 
         const s_showMeYourWorkButton = createButton("Show me Your work", '#show-me-your-work-group', SMOOTH_ANIMATION_GROUP);
         s_showMeYourWorkButton.addEventListener('click', () => {
+            removeButton(s_showMeYourWorkButton);
             showPage(WORK_GROUP, 3);
             createGallery('.gallery-block-show-me-your-work');
 
             const w_contactInfoButton = createButton("Contact info", '#contact-group', WORK_GROUP);
             w_contactInfoButton.addEventListener('click', () => {
+                removeButton(w_contactInfoButton);
                 showPage(CONTACT_GROUP, 4);
             });
         });

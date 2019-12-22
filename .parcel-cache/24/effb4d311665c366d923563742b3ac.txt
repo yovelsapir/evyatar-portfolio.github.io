@@ -1,4 +1,4 @@
-19117
+19119
 82c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\node_modules\abortcontroller-polyfill132214942980031171 1
 61c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\node_modules\ini132214942961650436 1
 99c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\node_modules\url\node_modules\punycode\LICENSE-MIT.txt130530063320000000 0
@@ -48,7 +48,7 @@
 62c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\package-lock.json132214948526229928 0
 89c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\node_modules\caniuse-lite\data\regions\NE.js121436361000000000 0
 76c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\node_modules\uniqs\package.json132214942917000420 0
-54c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\style.css132214998605516106 0
+54c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\style.css132215036571778466 0
 92c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\node_modules\css-tree\lib\common\SyntaxError.js121436361000000000 0
 117c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\node_modules\@babel\preset-env\lib\polyfills\regenerator\usage-plugin.js121436361000000000 0
 104c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\node_modules\util\node_modules\inherits\inherits_browser.js130131887980000000 0
@@ -56,7 +56,7 @@
 73c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\node_modules\sigmund\LICENSE130765799340000000 0
 90c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\node_modules\core-js\library\modules\_path.js121436361000000000 0
 95c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\node_modules\babel-runtime\core-js\get-iterator.js131473721010000000 0
-54c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\script.js132215008393973648 0
+54c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\script.js132215039011121391 0
 79c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\node_modules\argparse\lib\utils.js130991502160000000 0
 55c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\.gitignore132214942862038891 0
 67c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\node_modules\hsl-regex132214942962120413 1
@@ -80,7 +80,7 @@
 84c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\node_modules\postcss-normalize-url\dist132214942584673299 1
 79c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\node_modules\tiny-inflate\index.js121436361000000000 0
 74c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\node_modules\qs\test\index.js131406032370000000 0
-49c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\docs132214999439245710 1
+49c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\docs132215015816400365 1
 77c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\node_modules\lodash\_baseFill.js121436361000000000 0
 102c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\node_modules\es-abstract\2018\StrictEqualityComparison.js121436361000000000 0
 107c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\node_modules\resolve\test\resolver\incorrect_main\package.json121436361000000000 0
@@ -101,7 +101,7 @@
 81c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\node_modules\core-js\fn\parse-int.js121436361000000000 0
 81c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\node_modules\snapdragon-util\LICENSE131197857700000000 0
 130c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\node_modules\@parcel\transformer-babel\node_modules\core-js\features\composite-key.js121436361000000000 0
-55c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\index.html132214961433060538 0
+55c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\index.html132215030257471821 0
 134c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\node_modules\@parcel\transformer-babel\node_modules\core-js\es\object\set-prototype-of.js121436361000000000 0
 85c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\node_modules\function-bind\.editorconfig131483790010000000 0
 90c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\node_modules\json-stringify-safe\CHANGELOG.md130764732900000000 0
@@ -17984,7 +17984,7 @@
 84c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\node_modules\@parcel\runtime-js\LICENSE121436361000000000 0
 89c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\node_modules\@parcel\runtime-js\package.json132214942908120422 0
 94c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\node_modules\@parcel\runtime-js\src\bundle-url.js121436361000000000 0
-90c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\.cache\19\eafd9a43af9c078fe355405c07eda5.json132215000524853884 0
+90c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\.cache\19\eafd9a43af9c078fe355405c07eda5.json132215015817560373 0
 93c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\node_modules\@parcel\runtime-js\src\JSRuntime.js121436361000000000 0
 96c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\node_modules\@parcel\runtime-js\src\loaders\browser132214942552463285 1
 93c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\node_modules\@parcel\runtime-js\src\loaders\node132214942552823278 1
@@ -18946,10 +18946,12 @@
 71c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\node_modules\.bin\uuid.ps1132214942994921171 0
 72c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\node_modules\.bin\which.cmd132214942995051176 0
 72c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\node_modules\.bin\which.ps1132214942995051176 0
-60c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\docs\index.html132215000522473881 0
+60c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\docs\index.html132215015816270369 0
+68c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\docs\script.45850a3e.js132215015816380353 0
+72c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\docs\script.45850a3e.js.map132215015816450355 0
 68c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\docs\script.fa39493c.js132215000522543872 0
-68c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\docs\style.0954ec60.css132215000522493888 0
-72c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\docs\style.0954ec60.css.map132215000522543872 0
+68c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\docs\style.0954ec60.css132215015816300367 0
+72c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\docs\style.0954ec60.css.map132215015816380353 0
 60c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\dist\index.html132214976032648505 0
 68c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\dist\style.e308ff8e.css132214998565624082 0
 72c:\Users\Yovel\Desktop\Projects\Nuxt\evyatar\dist\style.e308ff8e.css.map132214998565644082 0
