@@ -177,24 +177,29 @@ a {
 }
 
 .gallery-block .box {
-    background-color: #DDDDDD;
+    position: relative;
+    background-color: #000000;
     width: 400px;
     height: 600px;
     margin-right: 40px;
     box-shadow: 0px 0px 20px 0px #00000055;
 }
 
-.gallery-block .box:hover {
+.gallery-block .box:hover img {
     cursor: pointer;
+    opacity: 1;
+    transition: 0.5s all;
+}
+
+.box > img {
+    height: 100%;
+    width: 100%;
+    opacity: 0.3;
 }
 
 .gallery-block .thin-box {
     width: 250px;
     height: 400px;
-}
-
-.gallery-block .thin-box:hover {
-    cursor: pointer;
 }
 
 .gallery-block-home-group {
