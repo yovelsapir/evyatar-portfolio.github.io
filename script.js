@@ -131,7 +131,6 @@ function showPage(group, order) {
 }
 
 function createButton(text, link, group) {
-    console.log(buttonsClicked);
     if (!buttonsClicked[`${link}${group}`]) {
         const button = document.createElement('a');
         var t = document.createTextNode(text);
