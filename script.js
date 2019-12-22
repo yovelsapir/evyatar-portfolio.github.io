@@ -1,3 +1,7 @@
+// const emergence = require('./emergence.min.js');
+const e = require('emergence.js');
+const emergence = e();
+
 const HOME_GROUP = 'home-group';
 const WORK_GROUP = 'show-me-your-work-group';
 const WHAT_YOU_CAN_DO_GROUP = 'what-you-can-do-group';
@@ -13,24 +17,6 @@ const CONTACT_GROUP = 'contact-group';
 
 document.querySelectorAll('.message-block').forEach((el) => el.style.top = "0px");
 document.querySelectorAll('.group-container').forEach((el, i) => el.style.order = i);
-
-let steps = 0;
-// let isRight = true;
-
-const buttonSteps = {
-    'show-me-your-work': {
-        'what-you-can-do': {
-            'show-me-smooth-animation': {
-                'contact-info': true
-            },
-        },
-        'show-me-smooth-animation': {
-            'what-you-can-do': {
-                'contact-info': true
-            },
-        }
-    }
-}
 
 document.querySelector(`#${HOME_GROUP} .show-me-your-work-btn`).addEventListener('click', () => {
     showPage(WORK_GROUP, 1);
@@ -133,48 +119,7 @@ function createButton(text, link, group) {
 
 function removeButton(el) {
     el.remove();
-    // el.removeEventListener('click');
 }
-// document.querySelector(`#${WHAT_YOU_CAN_DO_GROUP} .show-me-your-work-btn`).addEventListener('click', () => {
-//     if (steps == 1) {
-//         document.getElementById(WORK_GROUP).classList.remove('hidden');
-//         createGallery('.gallery-block-show-me-your-work');
-//         steps++;
-//     }
-// });
-
-// document.querySelector(`#${WHAT_YOU_CAN_DO_GROUP} .smooth-animation-btn`).addEventListener('click', () => {
-//     if (steps == 2) {
-//         document.getElementById(SMOOTH_ANIMATION_GROUP).classList.remove('hidden');
-//         document.querySelector(`#${WHAT_YOU_CAN_DO_GROUP} .show-me-your-work-btn`).remove();
-//         createGallery('.gallery-block-smooth-animation');
-//         steps++;
-//     }
-// });
-
-// document.querySelector(`#${WORK_GROUP} .what-you-can-do-btn`).addEventListener('click', () => {
-//     if (steps == 1) {
-//         document.getElementById(WHAT_YOU_CAN_DO_GROUP).classList.remove('hidden');
-//         document.querySelector(`#${WORK_GROUP} .smooth-animation-btn`).remove();
-//         steps++;
-//     }
-// });
-
-// document.querySelector(`#${WORK_GROUP} .smooth-animation-btn`).addEventListener('click', () => {
-//     document.getElementById(SMOOTH_ANIMATION_GROUP).classList.remove('hidden');
-//     createGallery('.gallery-block-smooth-animation');
-// });
-
-// document.querySelector(`#${SMOOTH_ANIMATION_GROUP} .what-you-can-do-btn`).addEventListener('click', () => {
-//     document.getElementById(WHAT_YOU_CAN_DO_GROUP).classList.remove('hidden');
-// });
-
-// document.querySelector(`#${SMOOTH_ANIMATION_GROUP} .contact-btn`).addEventListener('click', (e) => {
-//     if (steps == 3) {
-//         document.getElementById(CONTACT_GROUP).classList.remove('hidden');
-//         document.querySelector(`#${SMOOTH_ANIMATION_GROUP} .what-you-can-do-btn`).remove();
-//     }
-// });
 
 createGallery('.gallery-block-home-group');
 
@@ -240,10 +185,6 @@ function createGallery(selector, horizontalAlign) {
     }
 }
 
-function getScrollPosition() {
-    return scrollPos = window.scrollY || window.scrollTop || document.getElementsByTagName("html")[0].scrollTop;
-}
-
-this.setTimeout(function () {
+setTimeout(function () {
     window.scrollTo(0, 0);
 }, 200);

@@ -1,5 +1,5 @@
 {
-  "name": "emergence",
+  "name": "evyatar",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "emergence.js": "^1.1.2"
+    "emergence.js": "^1.1.2",
+    "parcel": "^2.0.0-alpha.3.2"
   }
 }
