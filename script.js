@@ -32,19 +32,11 @@ document.querySelector(`#${HOME_GROUP} .show-me-your-work-btn`).addEventListener
             removeButton(smoothAnimationButton);
             removeButton(whatYouCanDoButton);
             showPage(WHAT_YOU_CAN_DO_GROUP, 2);
-            const w_smoothAnimationButton = createButton("Show me smooth animations", '#smooth-animation-group', WHAT_YOU_CAN_DO_GROUP);
-            if (w_smoothAnimationButton) {
-                w_smoothAnimationButton.addEventListener('click', () => {
-                    removeButton(w_smoothAnimationButton);
-                    showPage(SMOOTH_ANIMATION_GROUP, 3);
-                    createGallery('.gallery-block-smooth-animation');
-                    const w_contactInfoButton = createButton("Contact info", '#contact-group', SMOOTH_ANIMATION_GROUP);
-                    if (w_contactInfoButton) {
-                        w_contactInfoButton.addEventListener('click', () => {
-                            removeButton(w_contactInfoButton);
-                            showPage(CONTACT_GROUP, 4);
-                        });
-                    }
+            const w_contactInfoButton = createButton("Contact info", '#contact-group', WHAT_YOU_CAN_DO_GROUP);
+            if (w_contactInfoButton) {
+                w_contactInfoButton.addEventListener('click', () => {
+                    removeButton(w_contactInfoButton);
+                    showPage(CONTACT_GROUP, 3);
                 });
             }
         });

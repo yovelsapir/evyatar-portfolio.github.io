@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Varela&display=swap" rel="stylesheet">
     <title>Evyatr mor</title>
-    <link href="/style.cd20c228.css" rel="stylesheet">
+    <link href="/style.39706c1f.css" rel="stylesheet">
 </head>
 
 <body>
@@ -22,6 +22,24 @@
                     </div>
 
                     <div class="message-block left">
+                        <div class="message show">
+                            Im Evyatar, Product designer
+                        </div>
+                    </div>
+
+                    <div class="message-block right">
+                        <div class="message show">
+                            Im Evyatar, Product designer
+                        </div>
+                    </div>
+
+                    <div class="message-block right">
+                        <div class="message show">
+                            Im Evyatar, Product designer
+                        </div>
+                    </div>
+
+                    <div class="message-block right">
                         <div class="message show">
                             Im Evyatar, Product designer
                         </div>
@@ -274,7 +292,7 @@
         </div>
     </main>
 
-    <script src="/script.3680fe80.js"></script>
+    <script src="/script.1638596f.js"></script>
 </body>
 
 </html>
