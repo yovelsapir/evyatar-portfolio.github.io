@@ -9,12 +9,6 @@ const SMOOTH_ANIMATION_GROUP = 'smooth-animation-group';
 const CONTACT_GROUP = 'contact-group';
 let buttonsClicked = {};
 
-// const HOME_GROUP_BTN = 'home-group';
-// const WORK_GROUP = 'show-me-your-work-group';
-// const WHAT_YOU_CAN_DO_GROUP = 'what-you-can-do-group';
-// const SMOOTH_ANIMATION_GROUP = 'smooth-animation-group';
-// const CONTACT_GROUP = 'contact-group';
-
 document.querySelectorAll('.message-block').forEach((el) => el.style.top = "0px");
 document.querySelectorAll('.group-container').forEach((el, i) => el.style.order = i);
 
@@ -177,33 +171,39 @@ emergence.init({
 
 function createGallery(selector, horizontalAlign) {
     const galleryBlock = document.querySelector(selector);
-    if (!galleryBlock.classList.contains('gallery-active')) {
-        const _horizontalAlign = horizontalAlign == 'right' ? horizontalAlign : 'left';
-        galleryBlock.classList.add('gallery-active');
-        galleryBlock.style.position = 'relative';
-        const galleryBlockChildrenCount = galleryBlock.childElementCount;
-        const galleryBlockChildrenClientWidth = galleryBlock.clientWidth;
-        const galleryBlockChildrenOffset = (galleryBlockChildrenCount * (galleryBlockChildrenClientWidth / galleryBlockChildrenCount)) / 1.5;
-        galleryBlock.style[_horizontalAlign] = -galleryBlockChildrenOffset + 'px';
-        let galleryBlockStep = 0;
-
-        galleryBlock.addEventListener('click', () => {
-            const galleryBlockPos = parseInt(galleryBlock.style[_horizontalAlign].replace('px', ''));
-            galleryBlockStep++;
-            if (galleryBlockStep >= galleryBlockChildrenCount) {
-                galleryBlock.style[_horizontalAlign] = -galleryBlockChildrenOffset + 'px'
-                galleryBlockStep = 0;
-            } else {
-                if (galleryBlockStep == galleryBlockChildrenCount - 1) {
-                    galleryBlock.style[_horizontalAlign] = '0px';
+    if(galleryBlock){
+        if (!galleryBlock.classList.contains('gallery-active')) {
+            const _horizontalAlign = horizontalAlign == 'right' ? horizontalAlign : 'left';
+            galleryBlock.classList.add('gallery-active');
+            galleryBlock.style.position = 'relative';
+            const galleryBlockChildrenCount = galleryBlock.childElementCount;
+            const galleryBlockChildrenClientWidth = galleryBlock.clientWidth;
+            const galleryBlockChildrenOffset = (galleryBlockChildrenCount * (galleryBlockChildrenClientWidth / galleryBlockChildrenCount)) / 1.5;
+            galleryBlock.style[_horizontalAlign] = -galleryBlockChildrenOffset + 'px';
+            let galleryBlockStep = 0;
+    
+            galleryBlock.addEventListener('click', () => {
+                const galleryBlockPos = parseInt(galleryBlock.style[_horizontalAlign].replace('px', ''));
+                galleryBlockStep++;
+                if (galleryBlockStep >= galleryBlockChildrenCount) {
+                    galleryBlock.style[_horizontalAlign] = -galleryBlockChildrenOffset + 'px'
+                    galleryBlockStep = 0;
                 } else {
-                    galleryBlock.style[_horizontalAlign] = (galleryBlockPos) + (galleryBlockChildrenClientWidth / galleryBlockChildrenCount) + 'px';
+                    if (galleryBlockStep == galleryBlockChildrenCount - 1) {
+                        galleryBlock.style[_horizontalAlign] = '0px';
+                    } else {
+                        galleryBlock.style[_horizontalAlign] = (galleryBlockPos) + (galleryBlockChildrenClientWidth / galleryBlockChildrenCount) + 'px';
+                    }
                 }
-            }
-        });
+            });
+        }
     }
 }
 
 setTimeout(function () {
     window.scrollTo(0, 0);
 }, 200);
+
+
+
+

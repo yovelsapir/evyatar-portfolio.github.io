@@ -6,15 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Varela&display=swap" rel="stylesheet">
-    <title>Evyatr mor</title>
+    <link rel="stylesheet prefetch" href="https://gist.githubusercontent.com/mfd/614e2e80a22b878bde63cb471cbe677e/raw/eef2aabfd0d588d43285431186a0cf70305ceb80/sanfrancisco-font.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <title>Evyatar mor</title>
     <link href="./style.css" rel="stylesheet">
 </head>
 
 <body>
     <main>
+
+        <img id="profile" src="https://i.ibb.co/cLkzr4R/blaaaa.png" />
+
+        <h2 id="location">Tel Aviv, Israel</h2>
+        
+        <h3 id="day">Today <span id="currentTime"></span>
+        </h3>
+
         <div class="page">
+            
             <div id="home-group" class="group-container" style="padding-top: 0;">
+
+                   
+
+
                 <div class="group element">
+                
                     <div class="message-block left">
                         <div class="message show">
                             Hi facebook
@@ -72,7 +88,10 @@
                 </div>
             </div>
 
-            <div id="show-me-your-work-group" class="group-container hidden">
+        <div id="show-me-your-work-group" class="group-container hidden" style="margin-top: -90vh;">
+                <div style="width: 100%; height: 90vh;">
+                </div>
+
                 <div class="group element" data-emergence="hidden">
                     <div class="message-block right" data-emergence="hidden">
                         <div class="message">
@@ -103,29 +122,35 @@
                             </path>
                         </svg>
                     </div>
-                    <div class="gallery-container">
-                        <div class="gallery-block gallery-block-show-me-your-work" style="margin-top: 50px;">
-                            <div class="box thin-box">
-                                <img
-                                    src="https://img.pngio.com/kcc-summer-digital-background-rjphotography-in-2019-studio-nature-background-hd-png-500_750.png" />
-                            </div>
 
-                            <div class="box thin-box">
-                                <img
-                                    src="https://i.pinimg.com/originals/0d/a4/ee/0da4ee55d5090106d2cec46de13e8fe2.jpg" />
-                            </div>
-
-                            <div class="box thin-box">
-                                <img
-                                    src="https://i.pinimg.com/originals/79/53/5e/79535e3572fbd75411086502fa8485d7.jpg" />
-                            </div>
-
-                            <div class="box thin-box">
-                                <img
-                                    src="https://img.pngio.com/kcc-summer-digital-background-rjphotography-in-2019-studio-nature-background-hd-png-500_750.png" />
+                    
+                    <!--
+                        <div class="gallery-container">
+                            <div class="gallery-block gallery-block-show-me-your-work" style="margin-top: 50px;">
+                                <div class="box thin-box">
+                                    <img
+                                        src="https://img.pngio.com/kcc-summer-digital-background-rjphotography-in-2019-studio-nature-background-hd-png-500_750.png" />
+                                </div>
+    
+                                <div class="box thin-box">
+                                    <img
+                                        src="https://i.pinimg.com/originals/0d/a4/ee/0da4ee55d5090106d2cec46de13e8fe2.jpg" />
+                                </div>
+    
+                                <div class="box thin-box">
+                                    <img
+                                        src="https://i.pinimg.com/originals/79/53/5e/79535e3572fbd75411086502fa8485d7.jpg" />
+                                </div>
+    
+                                <div class="box thin-box">
+                                    <img
+                                        src="https://img.pngio.com/kcc-summer-digital-background-rjphotography-in-2019-studio-nature-background-hd-png-500_750.png" />
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    -->
+
+                
                     <div class="button-group">
                         <!-- <a href="#what-you-can-do-group" class="what-you-can-do-btn btn">What you can
                             do</a>
@@ -136,7 +161,9 @@
                 </div>
             </div>
 
-            <div id="what-you-can-do-group" class="group-container hidden">
+            <div id="what-you-can-do-group" class="group-container hidden" style="margin-top: -90vh;">
+                    <div style="width: 100%; height: 90vh;">
+                        </div>
                 <div class="group element" data-emergence="hidden">
                     <div class="message-block right" data-emergence="hidden">
                         <div class="message">
@@ -200,7 +227,9 @@
                 </div>
             </div>
 
-            <div id="smooth-animation-group" class="group-container hidden">
+            <div id="smooth-animation-group" class="group-container hidden" style="margin-top: -90vh;">
+                    <div style="width: 100%; height: 90vh;">
+                        </div>
                 <div class="group element" data-emergence="hidden">
                     <div class="message-block right" data-emergence="hidden">
                         <div class="message">
@@ -256,7 +285,9 @@
                 </div>
             </div>
 
-            <div id="contact-group" class="group-container hidden">
+            <div id="contact-group" class="group-container hidden" style="margin-top: -90vh;">
+                    <div style="width: 100%; height: 90vh;">
+                        </div>
                 <div class="group element" data-emergence="hidden">
                     <div class="message-block right" data-emergence="hidden">
                         <div class="message">
@@ -308,3 +339,37 @@
 </body>
 
 </html>
+
+
+
+
+<script>
+
+window.onload = function() {
+    clock();  
+      function clock() {
+      var now = new Date();
+      var TwentyFourHour = now.getHours();
+      var hour = now.getHours();
+      var min = now.getMinutes();
+      var sec = now.getSeconds();
+      var mid = 'PM';
+      if (min < 10) {
+        min = "0" + min;
+      }
+      if (hour > 12) {
+        hour = hour - 12;
+      }    
+      if(hour==0){ 
+        hour=12;
+      }
+      if(TwentyFourHour < 12) {
+         mid = 'AM';
+      }     
+    document.getElementById('currentTime').innerHTML =     hour+':'+min+' '+mid;
+      //setTimeout(clock, 1000);
+      }
+  }
+
+ 
+</script>
