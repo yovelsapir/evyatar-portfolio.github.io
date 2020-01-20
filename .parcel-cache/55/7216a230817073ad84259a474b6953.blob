@@ -1,0 +1,1 @@
+document.getElementById('currentTime').innerHTML =   '12:10 PM';

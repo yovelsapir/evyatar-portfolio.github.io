@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@glidejs/glide": "^3.4.1",
     "emergence.js": "^1.1.2",
     "parcel": "^2.0.0-alpha.3.2"
   }

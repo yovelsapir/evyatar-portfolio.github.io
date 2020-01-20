@@ -1,0 +1,408 @@
+html,
+body {
+    margin: 0;
+    font-family: "San Francisco", sans-serif;
+    font-weight: 400;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.page {
+    margin-bottom: 0px;
+    margin-top: 50px;
+    width: 100%;
+    position: relative;
+    transition: 1s all;
+    display: flex;
+    flex-direction: column;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.element {
+    position: relative;
+    transition: 0.5s all;
+}
+
+.hidden {
+    display: none;
+}
+
+.message-block {
+    line-height: 26px;
+    position: relative;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    -o-transition: 0.5s all;
+}
+
+.message-block-last {
+    /* margin-bottom: 200px; */
+}
+
+.right .message,
+.left .message {
+    position: relative;
+    transition: 1s opacity, all 0.4s;
+    -webkit-transition: 1s opacity, all 0.4s;
+    -moz-transition: 1s opacity, all 0.4s;
+    -ms-transition: 1s opacity, all 0.4s;
+    -o-transition: 1s opacity, all 0.4s;
+    opacity: 0;
+}
+
+@keyframes bubbleleft {
+    0% {
+        opacity: 0;
+        transform: rotate(-45deg) scaleX(-1);
+        left: -3.5px;
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(0) scaleX(-1);
+    }
+}
+
+@keyframes bubbleRight {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) scaleX(1);
+        right: -4.5px;
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(0) scaleX(1);
+    }
+}
+
+.left>svg {
+    position: absolute;
+    left: -15.5px;
+    bottom: -1px;
+    transform: rotate(-45deg) scaleX(-1);
+    animation: bubbleleft 0.4s ease 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s;
+    fill: #e5e4e9;
+    opacity: 0;
+}
+
+.right>svg {
+    position: absolute;
+    right: -16.5px;
+    bottom: -2px;
+    transform: rotate(45deg) scaleX(1);
+    animation: bubbleRight 0.4s ease 0.2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.4s;
+    fill: #0253e2;
+    opacity: 0;
+}
+
+.message-block .show {
+    opacity: 1;
+}
+
+.right[data-emergence=hidden] .message {
+    left: 500px;
+}
+
+.right[data-emergence=visible] .message {
+    left: 0;
+    opacity: 1;
+}
+
+.left[data-emergence=hidden] .message {
+    left: -500px;
+}
+
+.left[data-emergence=visible] .message {
+    left: 0px;
+    opacity: 1;
+}
+
+.message-block {
+    display: block;
+    width: 100%;
+    max-width: 675px; 
+   /* max-width: 860px; */
+    margin-bottom: 10px;
+}
+
+.message {
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 20px;
+    font-size: 24px;
+}
+
+.right .message {
+    background-color: #0253e2;
+    color: white;
+    float: right;
+}
+
+.left .message {
+    color: #000000;
+    background-color: #e5e4e9;
+    color: rgb(59, 59, 59);
+}
+
+.gallery-container{
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.gallery-block {
+    display: flex;
+    align-self: flex-start;
+    margin-top: 50px;
+    transition: 1s all;
+}
+
+.gallery-block .box {
+    position: relative;
+    width: 400px;
+    height: 600px; 
+    margin-right: 40px;
+}
+
+.box>img {
+    height: 100%;
+    width: 100%;
+}
+
+.gallery-block .thin-box {
+    width: 250px;
+    height: 400px;
+}
+
+.gallery-block-home-group {
+    position: relative;
+}
+
+.gallery-block-show-me-your-work {
+    position: relative;
+}
+
+.gallery-block-smooth-animation {
+    position: relative;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+
+.btn {
+    margin: 0 5px;
+    background-color: transparent;
+    padding: 10px 20px;
+    border: 1px solid #dddddd;
+    transition: 0.3s all;
+    font-size: 20px;
+    border-radius: 50px;
+}
+
+.btn:hover {
+    background-color: #dddddd;
+    cursor: pointer;
+}
+
+.btn:focus {
+    border-color: #999999;
+    outline: none;
+}
+
+@media screen and (max-width: 950px) {
+
+    .message-block {
+        width: 88%;
+    }
+    .gallery-block{
+        margin-left: -125px;
+    }
+
+    .left{
+        margin-left: 35px;
+    }
+
+    .right{
+        margin-right: 35px;
+    }
+
+    .message {
+        font-size: 16px;
+        max-width: 270px;
+        padding: 7px 15px;
+    }
+
+    .right>svg {
+        right: -14.5px;
+    }
+
+    .left>svg {
+        left: -13.5px;
+    }
+
+    .btn {
+        padding: 7px 10px;
+        font-size: 13px;
+    }
+
+    .gallery-block .box{
+        max-width: 300px;
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .left{
+        margin-left: 50px;
+    }
+
+    .right{
+        margin-right: 50px;
+    }
+
+    .btn {
+        padding: 7px 10px;
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+#profile{
+    margin-top: 23px;
+    position: absolute;
+    right: 0;
+    left: 3%;
+    bottom: 0;
+    top: 0;
+    width: 90px;
+    height: 90px;
+   }
+   
+   #day {
+     margin-top: 100px;
+     color: #303030;
+     font-size: 16px;
+     text-align: center;
+     font-family: sans-serif;
+     font-weight: 600;
+     margin-bottom: 70px;
+   }
+   
+   #currentTime {
+     font-weight: 300;
+   }
+   
+   #location{
+     margin-top: 60px;
+     color: #000000;
+     font-size: 14px;
+     text-align: center;
+     font-family: sans-serif;
+     font-weight: 300;
+   }
+   
+   @media only screen and (min-width: 1000px) {
+       
+     #day {
+      font-size: 22px;
+       left: 2%;
+     }
+   
+     #location{
+      margin-top: 100px;
+      font-size: 16px;
+     }
+     
+     #profile{
+      margin-top: 40px;
+      width: 150px;
+      height: 150px;
+   }
+     
+   }   
+   
+   
+   
+@media only screen and (min-width: 1440px) {
+
+   .message-block {
+      max-width: 860px;
+    }
+}
+
+
+/** Ultra Light */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 100;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff");
+}
+
+
+
+
+/** Thin */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 200;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff");
+}
+
+/** Regular */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+/** Medium */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 500;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff");
+}
+
+/** Semi Bold */
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 600;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff");
+}
+
+/** Bold */ 
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 700;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff");
+}
+ {
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+  }
+    
