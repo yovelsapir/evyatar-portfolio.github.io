@@ -1,0 +1,3 @@
+position: absolute;   justify-content: flex-end;
+    display: flex;
+     width: 95%; background-color: aqua; margin: auto;

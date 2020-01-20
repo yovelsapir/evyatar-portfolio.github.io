@@ -1,0 +1,2 @@
+position: absolute;   display: flex;
+     width: 95%; background-color: aqua; margin: auto;

@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script data-parcel-key="5f7d2afb8c0dec6cf084f84f04ab87bd">
+        
+    (function emojiCursor() {
+  
+  var possibleEmoji = ["😀", "😂", "😆", "😊"]
+  var width = window.innerWidth;
+  var height = window.innerHeight;
+  var cursor = {x: width/2, y: width/2};
+  var particles = [];
+  
+  function init() {
+    bindEvents();
+    loop();
+  }
+  
+  // Bind events that are needed
+  function bindEvents() {
+    document.addEventListener('mousemove', onMouseMove);
+    document.addEventListener('touchmove', onTouchMove);
+    document.addEventListener('touchstart', onTouchMove);
+    
+    window.addEventListener('resize', onWindowResize);
+  }
+  
+  function onWindowResize(e) {
+    width = window.innerWidth;
+    height = window.innerHeight;
+  }
+  
+  function onTouchMove(e) {
+    if( e.touches.length > 0 ) {
+      for( var i = 0; i < e.touches.length; i++ ) {
+        addParticle( e.touches[i].clientX, e.touches[i].clientY, possibleEmoji[Math.floor(Math.random()*possibleEmoji.length)]);
+      }
+    }
+  }
+  
+  function onMouseMove(e) {    
+    cursor.x = e.clientX;
+    cursor.y = e.clientY;
+    
+    addParticle( cursor.x, cursor.y, possibleEmoji[Math.floor(Math.random()*possibleEmoji.length)]);
+  }
+  
+  function addParticle(x, y, character) {
+    var particle = new Particle();
+    particle.init(x, y, character);
+    particles.push(particle);
+  }
+  
+  function updateParticles() {
+    
+    // Updated
+    for( var i = 0; i < particles.length; i++ ) {
+      particles[i].update();
+    }
+    
+    // Remove dead particles
+    for( var i = particles.length -1; i >= 0; i-- ) {
+      if( particles[i].lifeSpan < 0 ) {
+        particles[i].die();
+        particles.splice(i, 1);
+      }
+    }
+    
+  }
+  
+  function loop() {
+    requestAnimationFrame(loop);
+    updateParticles();
+  }
+  
+  /**
+   * Particles
+   */
+  
+  function Particle() {
+
+    this.lifeSpan = 120; //ms
+    this.initialStyles ={
+      "position": "absolute",
+      "display": "block",
+      "pointerEvents": "none",
+      "z-index": "10000000",
+      "fontSize": "16px",
+      "will-change": "transform"
+    };
+
+    // Init, and set properties
+    this.init = function(x, y, character) {
+
+      this.velocity = {
+        x:  (Math.random() < 0.5 ? -1 : 1) * (Math.random() / 2),
+        y: 1
+      };
+      
+      this.position = {x: x - 10, y: y - 20};
+
+      this.element = document.createElement('span');
+      this.element.innerHTML = character;
+      applyProperties(this.element, this.initialStyles);
+      this.update();
+      
+      document.body.appendChild(this.element);
+    };
+    
+    this.update = function() {
+      this.position.x += this.velocity.x;
+      this.position.y += this.velocity.y;
+      this.lifeSpan--;
+      
+      this.element.style.transform = "translate3d(" + this.position.x + "px," + this.position.y + "px,0) scale(" + (this.lifeSpan / 120) + ")";
+    }
+    
+    this.die = function() {
+      this.element.parentNode.removeChild(this.element);
+    }
+    
+  }
+  
+  /**
+   * Utils
+   */
+  
+  // Applies css `properties` to an element.
+  function applyProperties( target, properties ) {
+    for( var key in properties ) {
+      target.style[ key ] = properties[ key ];
+    }
+  }
+  
+  init();
+})();
+
+
+        </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="e1b1e07f33267003a1ff99d48fb4d7bb" rel="stylesheet">
+    <link rel="stylesheet prefetch" href="1547d405f61b17040bc90ef5398aa7fe">
+    <link href="2d4c456c32bd96fde25b414ea402198d" rel="stylesheet">
+    <title>Evyatar mor</title>
+    <link href="e75c4f963723253acb8dd11f7ceb2887" rel="stylesheet">                
+</head>
+
+<body><div class="info">
+    <b><a href="4f81f32b0d6f82538d2c3582909daef0" target="_blank">90's cursor effects collection</a></b><br>
+    - Emoji Cursor
+  </div>
+
+    <main>
+
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox">
+                <div class="slider round"></div>
+          </label>
+          <p>Dark Mode</p>
+        </div>
+        
+        <img id="profile" src="08afb87615716dd9c86b183207937424">
+
+        <h2 id="location">Tel Aviv, Israel <br>⛈️  Rainy day</h2>
+        
+        <h3 id="day">Today <span id="currentTime"></span>
+
+                
+        </h3>
+
+        <div class="page">
+            
+            <div id="home-group" class="group-container" style="padding-top: 0;">
+
+                   
+
+
+                <div class="group element">
+                
+                    <div class="message-block left">
+                        <div class="message show">
+                            Hi facebook
+                        </div>
+                    </div>
+
+                    <div class="message-block left">
+                        <div class="message show">
+                            Im Evyatar, Product designer
+                        </div>
+                    </div>
+
+                    <div class="message-block left">
+                        <div class="message show">
+                            Ask me anything down below
+                        </div>
+                        <svg width="28px" height="34px" version="1.1" viewbox="0 0 28 34" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m27.741 33.472s-16.614-4.3375-16.614-25.801c0-14.309-3.7091-8.5988-11.127 17.132 7.4183 5.7798 16.665 8.6698 27.741 8.6698z">
+                            </path>
+                        </svg>
+                    </div>
+
+                    <div class="gallery-container">
+                        <div class="gallery-block gallery-block-home-group">
+                            <div class="box">
+                                <img src="8b866c0bc8f32bdfd2c7dcda4ca87c93">
+                            </div>
+
+                            <div class="box">
+                                <img src="48b7b505fcd95e7ed8720192a69065c3">
+                            </div>
+
+                            <div class="box">
+                                <img src="5f12ee0c93c21464e9277306f3df6061">
+                            </div>
+
+                            <div class="box">
+                                <img src="11c92061e9c7219cc2086b23bba62d47">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="button-group">
+                        <a href="#show-me-your-work-group" class="show-me-your-work-btn btn">Show me
+                            Your work</a>
+                        <a href="#what-you-can-do-group" class="what-you-can-do-btn btn">What you can
+                            do</a>
+                    </div>
+                </div>
+            </div>
+
+        <div id="show-me-your-work-group" class="group-container hidden" style="margin-top: -90vh;">
+                <div style="width: 100%; height: 90vh;">
+                </div>
+
+                <div class="group element" data-emergence="hidden">
+                    <div class="message-block right" data-emergence="hidden">
+                        <div class="message">
+                            Show me your work
+                        </div>
+                        <svg width="28px" height="34px" version="1.1" viewbox="0 0 28 34" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m27.741 33.472s-16.614-4.3375-16.614-25.801c0-14.309-3.7091-8.5988-11.127 17.132 7.4183 5.7798 16.665 8.6698 27.741 8.6698z">
+                            </path>
+                        </svg>
+                    </div>
+
+                    <div class="message-block left" data-emergence="hidden">
+                        <div class="message">
+                            Sure!
+                        </div>
+                    </div>
+
+                    <div class="message-block left message-block-last" data-emergence="hidden">
+                        <div class="message">
+                            Have a few case studies I created
+                        </div>
+                        <svg width="28px" height="34px" version="1.1" viewbox="0 0 28 34" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m27.741 33.472s-16.614-4.3375-16.614-25.801c0-14.309-3.7091-8.5988-11.127 17.132 7.4183 5.7798 16.665 8.6698 27.741 8.6698z">
+                            </path>
+                        </svg>
+                    </div>
+
+                    
+                    <!--
+                        <div class="gallery-container">
+                            <div class="gallery-block gallery-block-show-me-your-work" style="margin-top: 50px;">
+                                <div class="box thin-box">
+                                    <img
+                                        src="https://img.pngio.com/kcc-summer-digital-background-rjphotography-in-2019-studio-nature-background-hd-png-500_750.png" />
+                                </div>
+    
+                                <div class="box thin-box">
+                                    <img
+                                        src="https://i.pinimg.com/originals/0d/a4/ee/0da4ee55d5090106d2cec46de13e8fe2.jpg" />
+                                </div>
+    
+                                <div class="box thin-box">
+                                    <img
+                                        src="https://i.pinimg.com/originals/79/53/5e/79535e3572fbd75411086502fa8485d7.jpg" />
+                                </div>
+    
+                                <div class="box thin-box">
+                                    <img
+                                        src="https://img.pngio.com/kcc-summer-digital-background-rjphotography-in-2019-studio-nature-background-hd-png-500_750.png" />
+                                </div>
+                            </div>
+                        </div>
+                    -->
+
+                
+                    <div class="button-group">
+                        <!-- <a href="#what-you-can-do-group" class="what-you-can-do-btn btn">What you can
+                            do</a>
+
+                        <a href="#smooth-animation-group" class="smooth-animation-btn btn">Show me smooth
+                            animations</a> -->
+                    </div>
+                </div>
+            </div>
+
+            <div id="what-you-can-do-group" class="group-container hidden" style="margin-top: -90vh;">
+                    <div style="width: 100%; height: 90vh;">
+                        </div>
+                <div class="group element" data-emergence="hidden">
+                    <div class="message-block right" data-emergence="hidden">
+                        <div class="message">
+                            What you can do?
+                        </div>
+                        <svg width="28px" height="34px" version="1.1" viewbox="0 0 28 34" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m27.741 33.472s-16.614-4.3375-16.614-25.801c0-14.309-3.7091-8.5988-11.127 17.132 7.4183 5.7798 16.665 8.6698 27.741 8.6698z">
+                            </path>
+                        </svg>
+                    </div>
+
+                    <div class="message-block left" data-emergence="hidden">
+                        <div class="message">
+                            Oh well this is a good question
+                        </div>
+                    </div>
+
+                    <div class="message-block left" data-emergence="hidden">
+                        <div class="message">
+                            I can design and plan products
+                        </div>
+                    </div>
+
+                    <div class="message-block left" data-emergence="hidden">
+                        <div class="message">
+                            Create protorypes<br>
+                            And amaziong animations
+                        </div>
+                    </div>
+
+                    <div class="message-block left" data-emergence="hidden">
+                        <div class="message">
+                            Build websites
+                        </div>
+                    </div>
+
+                    <div class="message-block left message-block-last" data-emergence="hidden">
+                        <div class="message">
+                            And even to create unreal photo manipulation
+                        </div>
+                        <svg width="28px" height="34px" version="1.1" viewbox="0 0 28 34" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m27.741 33.472s-16.614-4.3375-16.614-25.801c0-14.309-3.7091-8.5988-11.127 17.132 7.4183 5.7798 16.665 8.6698 27.741 8.6698z">
+                            </path>
+                        </svg>
+                    </div>
+
+                    <!-- <div class="companies">
+                        
+                    </div> -->
+
+                    <div class="button-group">
+                        <!-- <a href="#show-me-your-work-group" class="show-me-your-work-btn btn">Show me
+                            Your work</a>
+                        <a href="#smooth-animation-group" class="smooth-animation-btn btn">Show me smooth
+                            animations</a> -->
+                    </div>
+                </div>
+            </div>
+
+            <div id="smooth-animation-group" class="group-container hidden" style="margin-top: -90vh;">
+                    <div style="width: 100%; height: 90vh;">
+                        </div>
+                <div class="group element" data-emergence="hidden">
+                    <div class="message-block right" data-emergence="hidden">
+                        <div class="message">
+                            Show me smooth animations
+                        </div>
+                        <svg width="28px" height="34px" version="1.1" viewbox="0 0 28 34" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m27.741 33.472s-16.614-4.3375-16.614-25.801c0-14.309-3.7091-8.5988-11.127 17.132 7.4183 5.7798 16.665 8.6698 27.741 8.6698z">
+                            </path>
+                        </svg>
+                    </div>
+
+                    <div class="message-block left message-block-last" data-emergence="hidden">
+                        <div class="message">
+                            You got it!
+                        </div>
+                        <svg width="28px" height="34px" version="1.1" viewbox="0 0 28 34" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m27.741 33.472s-16.614-4.3375-16.614-25.801c0-14.309-3.7091-8.5988-11.127 17.132 7.4183 5.7798 16.665 8.6698 27.741 8.6698z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="gallery-container">
+                        <div class="gallery-block gallery-block-smooth-animation" style="margin-top: 50px;">
+                            <div class="box">
+                                <img src="11c92061e9c7219cc2086b23bba62d47">
+                            </div>
+
+                            <div class="box">
+                                <img src="48b7b505fcd95e7ed8720192a69065c3">
+                            </div>
+
+                            <div class="box">
+                                <img src="5f12ee0c93c21464e9277306f3df6061">
+                            </div>
+
+                            <div class="box">
+                                <img src="11c92061e9c7219cc2086b23bba62d47">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <!-- <a href="#what-you-can-do-group" class="what-you-can-do-btn btn">What you can
+                            do</a>
+                        <a href="#contact-group" class="contact-btn btn">Contact Info</a> -->
+                    </div>
+                </div>
+            </div>
+
+            <div id="contact-group" class="group-container hidden" style="margin-top: -90vh;">
+                    <div style="width: 100%; height: 90vh;">
+                        </div>
+                <div class="group element" data-emergence="hidden">
+                    <div class="message-block right" data-emergence="hidden">
+                        <div class="message">
+                            How do I contact you?
+                        </div>
+                        <svg width="28px" height="34px" version="1.1" viewbox="0 0 28 34" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m27.741 33.472s-16.614-4.3375-16.614-25.801c0-14.309-3.7091-8.5988-11.127 17.132 7.4183 5.7798 16.665 8.6698 27.741 8.6698z">
+                            </path>
+                        </svg>
+                    </div>
+
+                    <div class="message-block left" data-emergence="hidden">
+                        <div class="message">
+                            Thats my number
+                        </div>
+                    </div>
+
+                    <div class="message-block left" data-emergence="hidden">
+                        <div class="message">
+                            050 78 44449
+                        </div>
+                    </div>
+
+                    <div class="message-block left" data-emergence="hidden">
+                        <div class="message">
+                            and here is my email
+                        </div>
+                    </div>
+
+                    <div class="message-block left message-block-last" data-emergence="hidden">
+                        <div class="message">
+                            evyatarmore2@gmail.com
+                        </div>
+                        <svg width="28px" height="34px" version="1.1" viewbox="0 0 28 34" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m27.741 33.472s-16.614-4.3375-16.614-25.801c0-14.309-3.7091-8.5988-11.127 17.132 7.4183 5.7798 16.665 8.6698 27.741 8.6698z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="6189b3989f66b6e3b61c1602162c4034"></script>
+
+
+
+</body>
+
+</html>
+
+
+<script data-parcel-key="276cf57ef1f38515c31cdc1bbfcaa48e">
+
+    window.onload = function() {
+        clock();  
+          function clock() {
+          var now = new Date();
+          var TwentyFourHour = now.getHours();
+          var hour = now.getHours();
+          var min = now.getMinutes();
+          var sec = now.getSeconds();
+          var mid = 'PM';
+          if (min < 10) {
+            min = "0" + min;
+          }
+          if (hour > 12) {
+            hour = hour - 12;
+          }    
+          if(hour==0){ 
+            hour=12;
+          }
+          if(TwentyFourHour < 12) {
+             mid = 'AM';
+          }     
+        document.getElementById('currentTime').innerHTML =     hour+':'+min+' '+mid;
+          //setTimeout(clock, 1000);
+          }
+      }
+    
+     
+    const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+    const currentTheme = localStorage.getItem('theme');
+    
+    if (currentTheme) {
+        document.documentElement.setAttribute('data-theme', currentTheme);
+      
+        if (currentTheme === 'dark') {
+            toggleSwitch.checked = true;
+        }
+    }
+    
+    function switchTheme(e) {
+        if (e.target.checked) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        }
+        else {        document.documentElement.setAttribute('data-theme', 'light');
+              localStorage.setItem('theme', 'light');
+        }    
+    }
+    
+    toggleSwitch.addEventListener('change', switchTheme, false);
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
