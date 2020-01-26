@@ -9,6 +9,14 @@ window.addEventListener('load', function(){
   }
 }, false)
 
+// חץ למטה
+
+var delayInMilliseconds = 20000; //1 second
+
+setTimeout(function() {
+  $('.arrow').css('visibility', 'visible');
+}, delayInMilliseconds);
+
 
 
 // const emergence = require('./emergence.min.js');
@@ -515,7 +523,7 @@ document.querySelector(`#${HOME_GROUP} .what-you-can-do-btn`).addEventListener('
     showPage(WORK_GROUP, 2);
     createGallery('.gallery-block-show-me-your-work');
 
-    const w_smoothAnimationButton = createButton("Show me more <small>🔥</small>", '#smooth-animation-group', WORK_GROUP);
+    const w_smoothAnimationButton = createButton("Give me more", '#smooth-animation-group', WORK_GROUP);
     const w_contactInfoButton = createButton("How can I contact you?", '#contact-group', WORK_GROUP);
 
 

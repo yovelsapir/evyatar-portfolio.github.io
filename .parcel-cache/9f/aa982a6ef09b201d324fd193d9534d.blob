@@ -1,0 +1,8 @@
+.center {
+  margin: auto;
+  max-width: 700px;
+  width: 90%;
+}
+.image-22{
+	  mix-blend-mode: darken;
+}

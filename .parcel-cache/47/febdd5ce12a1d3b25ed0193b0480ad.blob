@@ -1,0 +1,6 @@
+function loadIFrame() {
+    window.frames['BodyFrame'].document.location.href = "iframe.html";
+}         
+function delayedLoad() {
+    window.setTimeout(loadIFrame2, 5000);
+}
