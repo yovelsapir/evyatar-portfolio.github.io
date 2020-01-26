@@ -1,12 +1,10 @@
 // טעינת תמונה איטית
 
+const {Whitemoji2, Blackmoji2} = require('*.gif');
+
 window.addEventListener('load', function(){
-  var allimages= document.getElementsByTagName('img');
-  for (var i=0; i<allimages.length; i++) {
-      if (allimages[i].getAttribute('data-src')) {
-          allimages[i].setAttribute('src', allimages[i].getAttribute('data-src'));
-      }
-  }
+  const elm = $('[data-src=Whitemoji2]')
+  elm[0].setAttribute('src', Whitemoji2);
 }, false)
 
 // חץ למטה
@@ -719,11 +717,11 @@ const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"
 function switchTheme(e) {
     if (e.target.checked) {
         document.documentElement.setAttribute('data-theme', 'dark');
-        $(".profile").attr("src", src="/Blackmoji.1bfc299d.gif");
+        $(".profile").attr("src", src=`${Blackmoji2}`);
     }
     else {
         document.documentElement.setAttribute('data-theme', 'light');
-        $(".profile").attr("src", src="/Whitemoji.de99c868.gif");
+        $(".profile").attr("src", src=`${Whitemoji2}`);
     }    
 }
 
