@@ -1,8 +1,19 @@
+
+
 // טעינת תמונה איטית
+
 
 const {Whitemoji2, Blackmoji2} = require('*.gif');
 
-window.addEventListener('load', function(){
+Whitemoji2.on('ready', () => {
+  mainWindow = new BrowserWindow({
+      webPreferences: {
+          nodeIntegration: true
+      }
+  });
+});
+
+window.addEventListener('load', function(){ 
   const elm = $('[data-src=Whitemoji2]')
   elm[0].setAttribute('src', Whitemoji2);
 }, false)
