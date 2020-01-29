@@ -1112,12 +1112,12 @@ a {
   }
 
   .right>svg {
-    right: -13px;
+    right: -12px;
 
   }
 
   .left>svg {
-    left: -12.5px;
+    left: -12px;
   }
 
   .btn {
@@ -1135,11 +1135,11 @@ a {
   }
 
   #pdf2::before {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   #pdf2 {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   #pdf::after {
