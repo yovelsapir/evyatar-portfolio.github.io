@@ -40,7 +40,7 @@ body {
 }
 
 #confetti.opa{
-  opacity: 1;
+  opacity: 100%;
 }
 
 .header{
@@ -52,7 +52,7 @@ body {
 }
 
 .header.opac{
-  opacity: 1;
+  opacity: 100%;
   transition: all 1s;
   transition-delay: 0.5s;
 }
@@ -60,7 +60,7 @@ body {
 
 @keyframes confetti-ani {
   0%   { opacity: 0; }
-  100% { opacity: 1; }
+  100% { opacity: 100%; }
 }
 
   
@@ -148,7 +148,7 @@ a {
     }
 
     100% {
-        opacity: 1;
+        opacity: 100%;
         transform: rotate(0) scaleX(-1);
     }
 }
@@ -161,7 +161,7 @@ a {
     }
 
     100% {
-        opacity: 1;
+        opacity: 100%;
         transform: rotate(0) scaleX(1);
     }
 }
@@ -191,7 +191,7 @@ a {
 }
 
 .message-block .show {
-    opacity: 1;
+    opacity: 100%;
 }
 
 .right[data-emergence=hidden] .message {
@@ -200,7 +200,7 @@ a {
 
 .right[data-emergence=visible] .message {
     left: 0;
-    opacity: 1;
+    opacity: 100%;
 }
 
 .left[data-emergence=hidden] .message {
@@ -209,7 +209,7 @@ a {
 
 .left[data-emergence=visible] .message {
     left: 0px;
-    opacity: 1;
+    opacity: 100%;
 }
 
 .message-block {
@@ -356,7 +356,7 @@ a {
 }
 
 .box.load {
-  opacity: 1;
+  opacity: 100%;
   transform: translateY(0);
 }
 
@@ -463,7 +463,7 @@ transition: all 0.6s ease;
 
 #pdf2:hover::before{
   font-size: 16px;
-  opacity: 1;
+  opacity: 100%;
   transform: scale(1);
 }
 
@@ -486,15 +486,15 @@ transition: all 0.6s ease;
 }
 
 
-.f.triggeredCSS3 {opacity: 1; transform: scale(0.85);}
-.w.triggeredCSS3 {opacity: 1; transform: scale(0.85);}
-.s.triggeredCSS3 { opacity: 1; transform: scale(0.85);}
-.h.triggeredCSS3 {opacity: 1; transform: scale(0.85);}
-.c.triggeredCSS3 { opacity: 1; transform: scale(0.85);}
-.ps.triggeredCSS3 {opacity: 1; transform: scale(0.85);}
-.ae.triggeredCSS3 {opacity: 1; transform: scale(0.85);}
-.pr.triggeredCSS3 { opacity: 1; transform: scale(0.85);}
-.ai.triggeredCSS3 { opacity: 1; transform: scale(0.85);}
+.f.triggeredCSS3 {opacity: 100%; transform: scale(0.85);}
+.w.triggeredCSS3 {opacity: 100%; transform: scale(0.85);}
+.s.triggeredCSS3 { opacity: 100%; transform: scale(0.85);}
+.h.triggeredCSS3 {opacity: 100%; transform: scale(0.85);}
+.c.triggeredCSS3 { opacity: 100%; transform: scale(0.85);}
+.ps.triggeredCSS3 {opacity: 100%; transform: scale(0.85);}
+.ae.triggeredCSS3 {opacity: 100%; transform: scale(0.85);}
+.pr.triggeredCSS3 { opacity: 100%; transform: scale(0.85);}
+.ai.triggeredCSS3 { opacity: 100%; transform: scale(0.85);}
 
 .w{
   transition-delay: 0.5s;
