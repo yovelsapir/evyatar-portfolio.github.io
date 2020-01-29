@@ -1,5 +1,0 @@
-function myFunction() {
-                                  var x = location.pathname;
-                                  document.getElementById("demo").innerHTML = x;
-                                }
-                                <button onclick="myFunction()">Try it</button>
