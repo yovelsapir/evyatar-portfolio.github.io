@@ -13,6 +13,7 @@
   "dependencies": {
     "@glidejs/glide": "^3.4.1",
     "emergence.js": "^1.1.2",
+    "pace": "0.0.4",
     "parcel": "^2.0.0-alpha.3.2"
   },
   "devDependencies": {

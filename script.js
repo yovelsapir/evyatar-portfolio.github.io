@@ -2,6 +2,15 @@
 
 const {Whitemoji2, Blackmoji2} = require('*.gif');
 
+const pace = require('./pace')
+
+pace.start();
+
+document.querySelector('main').style.display = "none";
+pace.on('done', () => {
+  document.querySelector('main').style.display = "block";
+})
+
 window.addEventListener('load', function(){
   const elm = $('[data-src=Whitemoji2]')
   elm[0].setAttribute('src', Whitemoji2);
