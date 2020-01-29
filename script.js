@@ -16,6 +16,7 @@ window.addEventListener('load', function(){
   elm[0].setAttribute('src', Whitemoji2);
 }, false)
 
+console.log("Hello World!");
 // חץ למטה
 
 var delayInMilliseconds = 20000; //1 second
