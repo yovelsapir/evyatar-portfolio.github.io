@@ -456,7 +456,7 @@ a {
 
 .light-text-link-colors {
   color: var(--text-link-colors);
-  opacity: 0.0.5;
+  opacity: 0.5;
 }
 
 .showcase {
@@ -559,7 +559,7 @@ a {
 .gallery-p {
   font-weight: 400;
   color: var(--text-link-colors);
-  opacity: 0.0.5;
+  opacity: 0.5;
   margin-top: 3px;
   display: block;
   font-size: 16px;
@@ -811,32 +811,35 @@ a {
   }
 
   40% {
-    -ms-transform: translateY(-30px);
-    -webkit-transform: translateY(-30px);
-    transform: translateY(-30px);
-  }
-
-  60% {
     -ms-transform: translateY(-15px);
     -webkit-transform: translateY(-15px);
     transform: translateY(-15px);
+  }
+
+  60% {
+    -ms-transform: translateY(-7.5px);
+    -webkit-transform: translateY(-7.5px);
+    transform: translateY(-7.5px);
   }
 }
 
 .arrow {
   position: absolute;
-  visibility: hidden;
-  top: 420px;
+  top: 92%;
   left: 50%;
-  margin-left: -24px;
+  margin-left: -28px;
   width: 40px;
   height: 40px;
-  font-size: 15px;
+  font-size: 12px;
   padding: 20px;
   z-index: 99;
   background-size: 20px 15px;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.nothing{
+    opacity: 0.0;
 }
 
 .bounce {
@@ -1074,6 +1077,11 @@ a {
 
 @media screen and (max-width: 950px) {
 
+
+    .arrow{
+        opacity: 0.0;
+}
+
   #day {
     margin-top: 10%;
     margin-bottom: 90px;
@@ -1109,12 +1117,12 @@ a {
   }
 
   .left>svg {
-    left: -13px;
+    left: -12.5px;
   }
 
   .btn {
     padding: 7px 10px;
-    font-size: 13px;
+    font-size: 12.5px;
   }
 
   .gallery-block .box {
@@ -1135,11 +1143,11 @@ a {
   }
 
   #pdf::after {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   #pdf {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .bigger {
@@ -1168,15 +1176,8 @@ a {
   }
 
   .showcase {
-    /*
-      display: block; */
-    width: 690px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: row-reverse;
-    flex-direction: row-reverse;
-    margin-right: 128%;
-    overflow-x: scroll !important;
+    display: block; 
+    flex-direction: vertical;
     white-space: nowrap;
   }
 
@@ -1292,7 +1293,7 @@ a {
   right: 100%;
   height: 100%;
   width: 100%;
-  background: rgb(46, 4, 21);
+  background:  #29d;
 }
 
 .pace.pace-inactive {

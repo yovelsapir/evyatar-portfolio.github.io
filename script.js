@@ -16,7 +16,8 @@ window.addEventListener('load', function(){
   elm[0].setAttribute('src', Whitemoji2);
 }, false)
 
-console.log("Hello World!");
+
+
 // חץ למטה
 
 var delayInMilliseconds = 20000; //1 second
@@ -671,7 +672,7 @@ $(document).ready(function () {
   $('.profile').addClass("animate");
   $('.page').addClass("move");
   $('.header').addClass("opac");
-});
+}); 
 
 // אנימציה ברגע שזז
 
@@ -680,11 +681,13 @@ $(window).scroll(function () {
     $('.profile.animate').addClass("smaller");
     $('.frame').addClass("animatef");
     $('.warp').addClass("hidden");
+    $('.arrow').addClass("nothing");
   }
   else {
     $('.profile.animate').removeClass("smaller");
     $('.frame').removeClass("animatef");
     $('.warp').addClass("hidden");
+    $('.arrow').addClass("nothing");
   }
 });
 

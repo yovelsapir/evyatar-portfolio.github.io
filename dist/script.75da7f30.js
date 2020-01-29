@@ -1695,10 +1695,12 @@ $(window).scroll(function () {
     $('.profile.animate').addClass("smaller");
     $('.frame').addClass("animatef");
     $('.warp').addClass("hidden");
+    $('.arrow').addClass("nothing");
   } else {
     $('.profile.animate').removeClass("smaller");
     $('.frame').removeClass("animatef");
     $('.warp').addClass("hidden");
+    $('.arrow').addClass("nothing");
   }
 }); // שעון
 
@@ -1810,7 +1812,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50702" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55409" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
