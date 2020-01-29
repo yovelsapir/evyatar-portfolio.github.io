@@ -1147,6 +1147,7 @@ a {
   }
 
   #pdf {
+    text-decoration: underline;
     font-size: 13px;
   }
 
