@@ -742,7 +742,13 @@ toggleSwitch.addEventListener('change', switchTheme, false);
 
 
 
-
+/**
+* Create the routing function for different comapnies
+*/
+var url = new URL(document.URL);
+var company = url.searchParams.get("") || "you";
+document.getElementById('companyName').textContent = `Hi ${company} ✌`;
+console.log(company);
 
 
 

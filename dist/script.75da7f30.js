@@ -1748,7 +1748,15 @@ function switchTheme(e) {
   }
 }
 
-toggleSwitch.addEventListener('change', switchTheme, false); // סקילים
+toggleSwitch.addEventListener('change', switchTheme, false);
+/**
+* Create the routing function for different comapnies
+*/
+
+var url = new URL(document.URL);
+var company = url.searchParams.get("") || "you";
+document.getElementById('companyName').textContent = "Hi ".concat(company, " \u270C");
+console.log(company); // סקילים
 
 /**
  * inViewport jQuery plugin by Roko C.B.
@@ -1812,7 +1820,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51492" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55141" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
