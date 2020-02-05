@@ -1684,6 +1684,9 @@ setTimeout(function () {
   window.scrollTo(0, 0);
 }, 200); // אנימציה ברגע שנטען
 
+window.addEventListener('load', function () {
+  $("body").scrollTop($("#day").offset().top);
+});
 $(document).ready(function () {
   $('.profile').addClass("animate");
   $('.page').addClass("move");
@@ -1755,8 +1758,7 @@ toggleSwitch.addEventListener('change', switchTheme, false);
 
 var url = new URL(document.URL);
 var company = url.searchParams.get("") || "you";
-document.getElementById('companyName').textContent = "Hi ".concat(company, " \u270C");
-console.log(company); // סקילים
+document.getElementById('companyName').textContent = "Hi ".concat(company, " \u270C"); // סקילים
 
 /**
  * inViewport jQuery plugin by Roko C.B.
@@ -1820,7 +1822,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49624" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49528" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

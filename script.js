@@ -667,6 +667,11 @@ setTimeout(function () {
 
 // אנימציה ברגע שנטען
 
+window.addEventListener('load', function () {
+  $("body").scrollTop($("#day").offset().top);
+
+})
+
 
 $(document).ready(function () {
   $('.profile').addClass("animate");
@@ -748,8 +753,11 @@ toggleSwitch.addEventListener('change', switchTheme, false);
 var url = new URL(document.URL);
 var company = url.searchParams.get("") || "you";
 document.getElementById('companyName').textContent = `Hi ${company} ✌`;
-console.log(company);
 
+
+    
+ 
+  
 
 
 
