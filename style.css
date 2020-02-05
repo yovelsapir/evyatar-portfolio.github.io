@@ -400,7 +400,7 @@ a {
   -ms-transform: scale(0.5);
   transform: scale(0.5);
   opacity: 0.0%;
-  margin-top: 14%;
+  margin-top: 25%;
   position: relative;
   display: block;
   margin-left: auto;
@@ -519,6 +519,9 @@ a {
 }
 
 
+#topopo{
+  margin-top: 0%;
+}
 
 .box img {
   -webkit-filter: brightness(100%);
@@ -1163,6 +1166,14 @@ a {
 
 
 @media screen and (max-width: 480px) {
+
+  .profile{
+    margin-top: 14%;
+  }
+
+  #topopo{
+    margin-top: 11%;
+  }
   .left {
     margin-left: 50px;
   }
