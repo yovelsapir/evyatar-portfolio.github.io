@@ -1168,11 +1168,11 @@ a {
 @media screen and (max-width: 480px) {
 
   .profile{
-    margin-top: 25%;
+    margin-top: 0%;
   }
 
   #topopo{
-    margin-top: 0%;
+    margin-top: 25%;
   }
   .left {
     margin-left: 50px;
