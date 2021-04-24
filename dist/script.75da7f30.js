@@ -979,9 +979,9 @@ var _require = require('*.gif'),
 var pace = require('./pace');
 
 pace.start();
-document.querySelector('main').style.display = "none";
+document.querySelector('main').style.display = 'none';
 pace.on('done', function () {
-  document.querySelector('main').style.display = "block";
+  document.querySelector('main').style.display = 'block';
 });
 window.addEventListener('load', function () {
   var elm = $('[data-src=Whitemoji2]');
@@ -1004,7 +1004,7 @@ var SMOOTH_ANIMATION_GROUP = 'smooth-animation-group';
 var CONTACT_GROUP = 'contact-group';
 var buttonsClicked = {};
 document.querySelectorAll('.message-block').forEach(function (el) {
-  return el.style.top = "0px";
+  return el.style.top = '0px';
 });
 document.querySelectorAll('.group-container').forEach(function (el, i) {
   return el.style.order = i;
@@ -1028,8 +1028,8 @@ rAF = window.requestAnimationFrame,
 
 (function (w) {
   /**
-                * Fallback implementation.
-                */
+   * Fallback implementation.
+   */
   var prev = _now();
 
   function fallback(fn) {
@@ -1041,8 +1041,8 @@ rAF = window.requestAnimationFrame,
     return req;
   }
   /**
-                * Cancel.
-                */
+   * Cancel.
+   */
 
 
   var cancel = w.cancelAnimationFrame || w.webkitCancelAnimationFrame || w.clearTimeout;
@@ -1063,7 +1063,7 @@ function myFunction123() {
       confettiPaperCount = 95,
       DEG_TO_RAD = PI / 180,
       RAD_TO_DEG = 180 / PI,
-      colors = [["#df0049", "#660671"], ["#00e857", "#005291"], ["#2bebbc", "#05798a"], ["#ffd200", "#b06c00"]];
+      colors = [['#df0049', '#660671'], ['#00e857', '#005291'], ['#2bebbc', '#05798a'], ['#ffd200', '#b06c00']];
 
   function Vector2(_x, _y) {
     this.x = _x, this.y = _y;
@@ -1486,7 +1486,7 @@ function myFunction123() {
   window.addEventListener('resize', function (event) {
     confetti.resize();
   });
-  var canvas = document.getElementById("confetti");
+  var canvas = document.getElementById('confetti');
   canvas.width = window.innerWidth; // equals window dimension
 
   canvas.height = window.innerHeight;
@@ -1498,21 +1498,21 @@ document.querySelector("#".concat(HOME_GROUP, " .show-me-your-work-btn")).addEve
   document.querySelector("#".concat(HOME_GROUP, " .what-you-can-do-btn")).remove();
   document.querySelector("#".concat(HOME_GROUP, " .show-me-your-work-btn")).remove();
   createGallery('.gallery-block-show-me-your-work');
-  var smoothAnimationButton = createButton("Give me more", '#smooth-animation-group', WORK_GROUP);
-  var whatYouCanDoButton = createButton("What can you do?", '#what-you-can-do-group', WORK_GROUP);
+  var smoothAnimationButton = createButton('Give me more', '#smooth-animation-group', WORK_GROUP);
+  var whatYouCanDoButton = createButton('What can you do?', '#what-you-can-do-group', WORK_GROUP);
 
   if (whatYouCanDoButton) {
     whatYouCanDoButton.addEventListener('click', function () {
       removeButton(smoothAnimationButton);
       removeButton(whatYouCanDoButton);
       showPage(WHAT_YOU_CAN_DO_GROUP, 2);
-      var w_contactInfoButton = createButton("How can I contact you?", '#contact-group', WHAT_YOU_CAN_DO_GROUP);
+      var w_contactInfoButton = createButton('How can I contact you?', '#contact-group', WHAT_YOU_CAN_DO_GROUP);
 
       if (w_contactInfoButton) {
         w_contactInfoButton.addEventListener('click', function () {
           removeButton(w_contactInfoButton);
           showPage(CONTACT_GROUP, 3);
-          $('#confetti').addClass("opa");
+          $('#confetti').addClass('opa');
           myFunction123();
         });
       }
@@ -1525,19 +1525,19 @@ document.querySelector("#".concat(HOME_GROUP, " .show-me-your-work-btn")).addEve
       removeButton(smoothAnimationButton);
       showPage(SMOOTH_ANIMATION_GROUP, 2);
       createGallery('.gallery-block-smooth-animation');
-      var s_whatYouCanDoButton = createButton("What you can do?", '#what-you-can-do-group', SMOOTH_ANIMATION_GROUP);
+      var s_whatYouCanDoButton = createButton('What you can do?', '#what-you-can-do-group', SMOOTH_ANIMATION_GROUP);
 
       if (s_whatYouCanDoButton) {
         s_whatYouCanDoButton.addEventListener('click', function () {
           removeButton(s_whatYouCanDoButton);
           showPage(WHAT_YOU_CAN_DO_GROUP, 3);
-          var s_contactInfoButton = createButton("How can I contact you?", '#contact-group', WHAT_YOU_CAN_DO_GROUP);
+          var s_contactInfoButton = createButton('How can I contact you?', '#contact-group', WHAT_YOU_CAN_DO_GROUP);
 
           if (s_contactInfoButton) {
             s_contactInfoButton.addEventListener('click', function () {
               removeButton(s_contactInfoButton);
               showPage(CONTACT_GROUP, 4);
-              $('#confetti').addClass("opa");
+              $('#confetti').addClass('opa');
               myFunction123();
             });
           }
@@ -1550,25 +1550,25 @@ document.querySelector("#".concat(HOME_GROUP, " .what-you-can-do-btn")).addEvent
   showPage(WHAT_YOU_CAN_DO_GROUP, 1);
   document.querySelector("#".concat(HOME_GROUP, " .show-me-your-work-btn")).remove();
   document.querySelector("#".concat(HOME_GROUP, " .what-you-can-do-btn")).remove();
-  var showMeYourWorkButton = createButton("Show your workkk", '#show-me-your-work-group', WHAT_YOU_CAN_DO_GROUP); // const smoothAnimationButton = createButton("Show me more!", '#smooth-animation-group', WHAT_YOU_CAN_DO_GROUP);
+  var showMeYourWorkButton = createButton('Show your workkk', '#show-me-your-work-group', WHAT_YOU_CAN_DO_GROUP); // const smoothAnimationButton = createButton("Show me more!", '#smooth-animation-group', WHAT_YOU_CAN_DO_GROUP);
 
   showMeYourWorkButton.addEventListener('click', function () {
     // removeButton(smoothAnimationButton);
     removeButton(showMeYourWorkButton);
     showPage(WORK_GROUP, 2);
     createGallery('.gallery-block-show-me-your-work');
-    var w_smoothAnimationButton = createButton("Give me more", '#smooth-animation-group', WORK_GROUP);
-    var w_contactInfoButton = createButton("How can I contact you?", '#contact-group', WORK_GROUP);
+    var w_smoothAnimationButton = createButton('Give me more', '#smooth-animation-group', WORK_GROUP);
+    var w_contactInfoButton = createButton('How can I contact you?', '#contact-group', WORK_GROUP);
     w_smoothAnimationButton.addEventListener('click', function () {
       removeButton(w_contactInfoButton);
       removeButton(w_smoothAnimationButton);
       showPage(SMOOTH_ANIMATION_GROUP, 3);
       createGallery('.gallery-block-smooth-animation');
-      var w_contactInfoButton1 = createButton("How can I contact you?", '#contact-group', SMOOTH_ANIMATION_GROUP);
+      var w_contactInfoButton1 = createButton('How can I contact you?', '#contact-group', SMOOTH_ANIMATION_GROUP);
       w_contactInfoButton1.addEventListener('click', function () {
         removeButton(w_contactInfoButton1);
         showPage(CONTACT_GROUP, 4);
-        $('#confetti').addClass("opa");
+        $('#confetti').addClass('opa');
         myFunction123();
       });
     });
@@ -1576,14 +1576,14 @@ document.querySelector("#".concat(HOME_GROUP, " .what-you-can-do-btn")).addEvent
       removeButton(w_contactInfoButton);
       removeButton(w_smoothAnimationButton);
       showPage(CONTACT_GROUP, 3);
-      $('#confetti').addClass("opa");
+      $('#confetti').addClass('opa');
       myFunction123();
     });
     /*   s_contactInfoButton.addEventListener('click', () => {
-         removeButton(w_contactInfoButton);
-         removeButton(w_smoothAnimationButton);
-         showPage(CONTACT_GROUP, 4);
-       }); */
+       removeButton(w_contactInfoButton);
+       removeButton(w_smoothAnimationButton);
+       showPage(CONTACT_GROUP, 4);
+     }); */
   });
 });
 
@@ -1685,25 +1685,25 @@ setTimeout(function () {
 }, 200); // אנימציה ברגע שנטען
 
 window.addEventListener('load', function () {
-  $("body").scrollTop($("#day").offset().top);
+  $('body').scrollTop($('#day').offset().top);
 });
 $(document).ready(function () {
-  $('.profile').addClass("animate");
-  $('.page').addClass("move");
-  $('.header').addClass("opac");
+  $('.profile').addClass('animate');
+  $('.page').addClass('move');
+  $('.header').addClass('opac');
 }); // אנימציה ברגע שזז
 
 $(window).scroll(function () {
   if ($(this).scrollTop() > 50) {
-    $('.profile.animate').addClass("smaller");
-    $('.frame').addClass("animatef");
-    $('.warp').addClass("hidden");
-    $('.arrow').addClass("nothing");
+    $('.profile.animate').addClass('smaller');
+    $('.frame').addClass('animatef');
+    $('.warp').addClass('hidden');
+    $('.arrow').addClass('nothing');
   } else {
-    $('.profile.animate').removeClass("smaller");
-    $('.frame').removeClass("animatef");
-    $('.warp').addClass("hidden");
-    $('.arrow').addClass("nothing");
+    $('.profile.animate').removeClass('smaller');
+    $('.frame').removeClass('animatef');
+    $('.warp').addClass('hidden');
+    $('.arrow').addClass('nothing');
   }
 }); // שעון
 
@@ -1719,7 +1719,7 @@ window.onload = function () {
     var mid = 'PM';
 
     if (min < 10) {
-      min = "0" + min;
+      min = '0' + min;
     }
 
     if (hour > 12) {
@@ -1744,20 +1744,20 @@ var toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]'
 function switchTheme(e) {
   if (e.target.checked) {
     document.documentElement.setAttribute('data-theme', 'dark');
-    $(".profile").attr("src", src = "".concat(Blackmoji2));
+    $('.profile').attr('src', src = "".concat(Blackmoji2));
   } else {
     document.documentElement.setAttribute('data-theme', 'light');
-    $(".profile").attr("src", src = "".concat(Whitemoji2));
+    $('.profile').attr('src', src = "".concat(Whitemoji2));
   }
 }
 
 toggleSwitch.addEventListener('change', switchTheme, false);
 /**
-* Create the routing function for different comapnies
-*/
+ * Create the routing function for different comapnies
+ */
 
 var url = new URL(document.URL);
-var company = url.searchParams.get("") || "you";
+var company = url.searchParams.get('') || 'you';
 document.getElementById('companyName').textContent = "Hi ".concat(company, " \u270C"); // סקילים
 
 /**
@@ -1767,8 +1767,6 @@ document.getElementById('companyName').textContent = "Hi ".concat(company, " \u2
  * the current amount of px an element is visible in viewport
  * (The min returned value is 0 (element outside of viewport)
  */
-
-;
 
 (function ($, win) {
   $.fn.inViewport = function (cb) {
@@ -1783,16 +1781,75 @@ document.getElementById('companyName').textContent = "Hi ".concat(company, " \u2
       }
 
       visPx();
-      $(win).on("resize scroll", visPx);
+      $(win).on('resize scroll', visPx);
     });
   };
 })(jQuery, window);
 
-$(".bigger").inViewport(function (px) {
-  if (px) $(this).addClass("triggeredCSS3");
+$('.bigger').inViewport(function (px) {
+  if (px) $(this).addClass('triggeredCSS3');
 });
-$(".box").inViewport(function (px) {
-  if (px) $(this).addClass("load");
+$('.box').inViewport(function (px) {
+  if (px) $(this).addClass('load');
+});
+$(document).ready(function () {
+  $('#inputto').focus();
+  $('.butttton').click(function () {
+    var str = $('#inputto').val();
+
+    if (str == 'Open sesame' || str == 'Open sesame') {
+      $('#formino').css({
+        display: 'none'
+      });
+      $('#open-sesame').css({
+        display: 'block'
+      });
+      $('.my-works').removeClass('my-works');
+      $('.showcase').removeClass('my-works'); //  $('#formino').addClass('coloro');
+      //  $('.butttton').addClass('nono');
+      //  $('#inputto').addClass('whito');
+      //  $('#leftito').addClass('leftitwo');
+      //  $('#stanz').addClass('bominggo');
+    } else {
+      $('#formino').addClass('wrrngo');
+    }
+  }); //OnEnter
+
+  $('#formino').keydown(function (event) {
+    var keyCode = event.keyCode ? event.keyCode : event.which;
+
+    if (keyCode == 13) {
+      var str = $('#inputto').val();
+
+      if (str == 'Open sesame' || str == 'Open sesame') {
+        $('#formino').css({
+          display: 'none'
+        });
+        $('#open-sesame').css({
+          display: 'block'
+        });
+        $('.my-works').removeClass('my-works');
+        $('.showcase').removeClass('my-works'); // $('#formino').addClass('coloro');
+        // $('.butttton').addClass('nono');
+        // $('#inputto').addClass('whito');
+        // $('#leftito').addClass('leftitwo');
+        // $('#stanz').addClass('bominggo');
+        // $('#inputto').blur();
+      } else {
+        $('#formino').addClass('wrrngo');
+      }
+    }
+  });
+  $('#inputto').keyup(function () {
+    if ($(this).val().length > 0) {
+      $('#formino').addClass('typi');
+      $('.butttton').addClass('typipi');
+    } else {
+      $('#formino').removeClass('typi');
+      $('.butttton').removeClass('typipi');
+      $('#formino').removeClass('wrrngo');
+    }
+  });
 });
 },{"*.gif":"*.gif","./pace":"pace.js","emergence.js":"node_modules/emergence.js/src/emergence.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -1822,7 +1879,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57945" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62620" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
