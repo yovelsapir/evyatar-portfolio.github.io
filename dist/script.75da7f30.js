@@ -986,13 +986,14 @@ pace.on('done', function () {
 window.addEventListener('load', function () {
   var elm = $('[data-src=Whitemoji2]');
   elm[0].setAttribute('src', Whitemoji2);
-}, false); // חץ למטה
-
-var delayInMilliseconds = 20000; //1 second
+}, false); // אנימציות מרגש שנטען
 
 setTimeout(function () {
-  $('.arrow').css('visibility', 'visible');
-}, delayInMilliseconds); // const emergence = require('./emergence.min.js');
+  $('.arrow').css('opacity', '1');
+}, 3500);
+setTimeout(function () {
+  window.scrollTo(0, 1);
+}, 1000); // const emergence = require('./emergence.min.js');
 
 var e = require('emergence.js');
 
@@ -1497,8 +1498,8 @@ document.querySelector("#".concat(HOME_GROUP, " .show-me-your-work-btn")).addEve
   showPage(WORK_GROUP, 1);
   document.querySelector("#".concat(HOME_GROUP, " .what-you-can-do-btn")).remove();
   document.querySelector("#".concat(HOME_GROUP, " .show-me-your-work-btn")).remove();
-  createGallery('.gallery-block-show-me-your-work');
-  var smoothAnimationButton = createButton('Give me more', '#smooth-animation-group', WORK_GROUP);
+  createGallery('.gallery-block-show-me-your-work'); // const smoothAnimationButton = createButton('Give me more', '#smooth-animation-group', WORK_GROUP);
+
   var whatYouCanDoButton = createButton('What can you do?', '#what-you-can-do-group', WORK_GROUP);
 
   if (whatYouCanDoButton) {
@@ -1550,14 +1551,14 @@ document.querySelector("#".concat(HOME_GROUP, " .what-you-can-do-btn")).addEvent
   showPage(WHAT_YOU_CAN_DO_GROUP, 1);
   document.querySelector("#".concat(HOME_GROUP, " .show-me-your-work-btn")).remove();
   document.querySelector("#".concat(HOME_GROUP, " .what-you-can-do-btn")).remove();
-  var showMeYourWorkButton = createButton('Show your workkk', '#show-me-your-work-group', WHAT_YOU_CAN_DO_GROUP); // const smoothAnimationButton = createButton("Show me more!", '#smooth-animation-group', WHAT_YOU_CAN_DO_GROUP);
+  var showMeYourWorkButton = createButton('Show your work', '#show-me-your-work-group', WHAT_YOU_CAN_DO_GROUP); // const smoothAnimationButton = createButton("Show me more!", '#smooth-animation-group', WHAT_YOU_CAN_DO_GROUP);
 
   showMeYourWorkButton.addEventListener('click', function () {
     // removeButton(smoothAnimationButton);
     removeButton(showMeYourWorkButton);
     showPage(WORK_GROUP, 2);
     createGallery('.gallery-block-show-me-your-work');
-    var w_smoothAnimationButton = createButton('Give me more', '#smooth-animation-group', WORK_GROUP);
+    var w_smoothAnimationButton = createButton('What about XR?', '#smooth-animation-group', WORK_GROUP);
     var w_contactInfoButton = createButton('How can I contact you?', '#contact-group', WORK_GROUP);
     w_smoothAnimationButton.addEventListener('click', function () {
       removeButton(w_contactInfoButton);
@@ -1678,11 +1679,8 @@ function createGallery(selector, horizontalAlign) {
       });
     }
   }
-}
+} // אנימציה ברגע שנטען
 
-setTimeout(function () {
-  window.scrollTo(0, 0);
-}, 200); // אנימציה ברגע שנטען
 
 window.addEventListener('load', function () {
   $('body').scrollTop($('#day').offset().top);
@@ -1696,16 +1694,16 @@ $(document).ready(function () {
 $(window).scroll(function () {
   if ($(this).scrollTop() > 50) {
     $('.profile.animate').addClass('smaller');
-    $('.frame').addClass('animatef');
-    $('.warp').addClass('hidden');
+    $('.frame').addClass('animatef'); //  $('.warp').addClass('hidden');
+
     $('.arrow').addClass('nothing');
   } else {
     $('.profile.animate').removeClass('smaller');
-    $('.frame').removeClass('animatef');
-    $('.warp').addClass('hidden');
-    $('.arrow').addClass('nothing');
+    $('.frame').removeClass('animatef'); // $('.warp').addClass('hidden');
+
+    $('.arrow').removeClass('nothing');
   }
-}); // שעון
+}); //שעון 
 
 window.onload = function () {
   clock();
@@ -1745,9 +1743,11 @@ function switchTheme(e) {
   if (e.target.checked) {
     document.documentElement.setAttribute('data-theme', 'dark');
     $('.profile').attr('src', src = "".concat(Blackmoji2));
+    $('.profile').css('mix-blend-mode', 'screen');
   } else {
     document.documentElement.setAttribute('data-theme', 'light');
     $('.profile').attr('src', src = "".concat(Whitemoji2));
+    $('.profile').css('mix-blend-mode', 'multiply');
   }
 }
 
@@ -1792,65 +1792,6 @@ $('.bigger').inViewport(function (px) {
 $('.box').inViewport(function (px) {
   if (px) $(this).addClass('load');
 });
-$(document).ready(function () {
-  $('#inputto').focus();
-  $('.butttton').click(function () {
-    var str = $('#inputto').val();
-
-    if (str == 'Open sesame' || str == 'Open sesame') {
-      $('#formino').css({
-        display: 'none'
-      });
-      $('#open-sesame').css({
-        display: 'block'
-      });
-      $('.my-works').removeClass('my-works');
-      $('.showcase').removeClass('my-works'); //  $('#formino').addClass('coloro');
-      //  $('.butttton').addClass('nono');
-      //  $('#inputto').addClass('whito');
-      //  $('#leftito').addClass('leftitwo');
-      //  $('#stanz').addClass('bominggo');
-    } else {
-      $('#formino').addClass('wrrngo');
-    }
-  }); //OnEnter
-
-  $('#formino').keydown(function (event) {
-    var keyCode = event.keyCode ? event.keyCode : event.which;
-
-    if (keyCode == 13) {
-      var str = $('#inputto').val();
-
-      if (str == 'Open sesame' || str == 'Open sesame') {
-        $('#formino').css({
-          display: 'none'
-        });
-        $('#open-sesame').css({
-          display: 'block'
-        });
-        $('.my-works').removeClass('my-works');
-        $('.showcase').removeClass('my-works'); // $('#formino').addClass('coloro');
-        // $('.butttton').addClass('nono');
-        // $('#inputto').addClass('whito');
-        // $('#leftito').addClass('leftitwo');
-        // $('#stanz').addClass('bominggo');
-        // $('#inputto').blur();
-      } else {
-        $('#formino').addClass('wrrngo');
-      }
-    }
-  });
-  $('#inputto').keyup(function () {
-    if ($(this).val().length > 0) {
-      $('#formino').addClass('typi');
-      $('.butttton').addClass('typipi');
-    } else {
-      $('#formino').removeClass('typi');
-      $('.butttton').removeClass('typipi');
-      $('#formino').removeClass('wrrngo');
-    }
-  });
-});
 },{"*.gif":"*.gif","./pace":"pace.js","emergence.js":"node_modules/emergence.js/src/emergence.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -1879,7 +1820,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62620" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52930" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

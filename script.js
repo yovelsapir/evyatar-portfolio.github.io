@@ -1,3 +1,5 @@
+
+
 // טעינת תמונה איטית
 
 const { Whitemoji2, Blackmoji2 } = require('*.gif');
@@ -20,13 +22,17 @@ window.addEventListener(
    false
 );
 
-// חץ למטה
-
-var delayInMilliseconds = 20000; //1 second
+// אנימציות מרגש שנטען
 
 setTimeout(function () {
-   $('.arrow').css('visibility', 'visible');
-}, delayInMilliseconds);
+   $('.arrow').css('opacity', '1');
+}, 3500);
+
+setTimeout(function () {
+   window.scrollTo(0, 1);
+}, 1000);
+
+
 
 // const emergence = require('./emergence.min.js');
 const e = require('emergence.js');
@@ -450,7 +456,7 @@ document.querySelector(`#${HOME_GROUP} .show-me-your-work-btn`).addEventListener
    document.querySelector(`#${HOME_GROUP} .show-me-your-work-btn`).remove();
    createGallery('.gallery-block-show-me-your-work');
 
-   const smoothAnimationButton = createButton('Give me more', '#smooth-animation-group', WORK_GROUP);
+   // const smoothAnimationButton = createButton('Give me more', '#smooth-animation-group', WORK_GROUP);
    const whatYouCanDoButton = createButton('What can you do?', '#what-you-can-do-group', WORK_GROUP);
 
    if (whatYouCanDoButton) {
@@ -502,7 +508,7 @@ document.querySelector(`#${HOME_GROUP} .what-you-can-do-btn`).addEventListener('
    document.querySelector(`#${HOME_GROUP} .show-me-your-work-btn`).remove();
    document.querySelector(`#${HOME_GROUP} .what-you-can-do-btn`).remove();
 
-   const showMeYourWorkButton = createButton('Show your workkk', '#show-me-your-work-group', WHAT_YOU_CAN_DO_GROUP);
+   const showMeYourWorkButton = createButton('Show your work', '#show-me-your-work-group', WHAT_YOU_CAN_DO_GROUP);
    // const smoothAnimationButton = createButton("Show me more!", '#smooth-animation-group', WHAT_YOU_CAN_DO_GROUP);
 
    showMeYourWorkButton.addEventListener('click', () => {
@@ -511,7 +517,7 @@ document.querySelector(`#${HOME_GROUP} .what-you-can-do-btn`).addEventListener('
       showPage(WORK_GROUP, 2);
       createGallery('.gallery-block-show-me-your-work');
 
-      const w_smoothAnimationButton = createButton('Give me more', '#smooth-animation-group', WORK_GROUP);
+      const w_smoothAnimationButton = createButton('What about XR?', '#smooth-animation-group', WORK_GROUP);
       const w_contactInfoButton = createButton('How can I contact you?', '#contact-group', WORK_GROUP);
 
       w_smoothAnimationButton.addEventListener('click', () => {
@@ -633,9 +639,7 @@ function createGallery(selector, horizontalAlign) {
    }
 }
 
-setTimeout(function () {
-   window.scrollTo(0, 0);
-}, 200);
+
 
 // אנימציה ברגע שנטען
 
@@ -655,21 +659,21 @@ $(window).scroll(function () {
    if ($(this).scrollTop() > 50) {
       $('.profile.animate').addClass('smaller');
       $('.frame').addClass('animatef');
-      $('.warp').addClass('hidden');
-      $('.arrow').addClass('nothing');
+    //  $('.warp').addClass('hidden');
+       $('.arrow').addClass('nothing');
    } else {
       $('.profile.animate').removeClass('smaller');
       $('.frame').removeClass('animatef');
-      $('.warp').addClass('hidden');
-      $('.arrow').addClass('nothing');
+      // $('.warp').addClass('hidden');
+       $('.arrow').removeClass('nothing');
    }
 });
 
-// שעון
+
+//שעון 
 
 window.onload = function () {
    clock();
-
    function clock() {
       var now = new Date();
       var TwentyFourHour = now.getHours();
@@ -702,9 +706,11 @@ function switchTheme(e) {
    if (e.target.checked) {
       document.documentElement.setAttribute('data-theme', 'dark');
       $('.profile').attr('src', (src = `${Blackmoji2}`));
+      $('.profile').css('mix-blend-mode', 'screen');
    } else {
       document.documentElement.setAttribute('data-theme', 'light');
       $('.profile').attr('src', (src = `${Whitemoji2}`));
+      $('.profile').css('mix-blend-mode', 'multiply');
    }
 }
 
@@ -749,59 +755,4 @@ $('.bigger').inViewport(function (px) {
 
 $('.box').inViewport(function (px) {
    if (px) $(this).addClass('load');
-});
-
-$(document).ready(function () {
-   $('#inputto').focus();
-
-   $('.butttton').click(function () {
-      var str = $('#inputto').val();
-      if ((str == 'Open sesame') || (str == 'Open sesame')) {
-        $('#formino').css({display: 'none'})
-        $('#open-sesame').css({display: 'block'});
-        $('.my-works').removeClass('my-works');
-        $('.showcase').removeClass('my-works');
-
-        //  $('#formino').addClass('coloro');
-        //  $('.butttton').addClass('nono');
-        //  $('#inputto').addClass('whito');
-        //  $('#leftito').addClass('leftitwo');
-        //  $('#stanz').addClass('bominggo');
-      } else {
-         $('#formino').addClass('wrrngo');
-      }
-   });
-
-   //OnEnter
-   $('#formino').keydown(function (event) {
-      var keyCode = event.keyCode ? event.keyCode : event.which;
-      if (keyCode == 13) {
-         var str = $('#inputto').val();
-         if ((str == 'Open sesame') || (str == 'Open sesame')) {
-            $('#formino').css({display: 'none'})
-            $('#open-sesame').css({display: 'block'});
-            $('.my-works').removeClass('my-works');
-            $('.showcase').removeClass('my-works');
-            // $('#formino').addClass('coloro');
-            // $('.butttton').addClass('nono');
-            // $('#inputto').addClass('whito');
-            // $('#leftito').addClass('leftitwo');
-            // $('#stanz').addClass('bominggo');
-            // $('#inputto').blur();
-         } else {
-            $('#formino').addClass('wrrngo');
-         }
-      }
-   });
-
-   $('#inputto').keyup(function () {
-      if ($(this).val().length > 0) {
-         $('#formino').addClass('typi');
-         $('.butttton').addClass('typipi');
-      } else {
-         $('#formino').removeClass('typi');
-         $('.butttton').removeClass('typipi');
-         $('#formino').removeClass('wrrngo');
-      }
-   });
 });

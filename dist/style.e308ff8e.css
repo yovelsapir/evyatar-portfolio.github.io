@@ -14,9 +14,6 @@ body {
   display: none;
 }
 
-.my-works {
-  display: none !important;
-}
 
 .secret-password {
   left: 0 !important;
@@ -87,63 +84,6 @@ body {
 }
 :-ms-input-placeholder { /* IE 10+ */
        transform: translateX(-2px);
-}
-
-#inputto {
-  flex-grow:2;
-  border:none;
-  font-family: inherit;
-  font-size: 24px;
-  line-height: 34px;
-  transition: all 0.2s ease;
-  outline: none;
-  background: none;
-  z-index: 20;
-}
-
-
-#inputto.whito{
-  color: white;
-  pointer-events: none;
-}
-
-.butttton {
-  outline:none;
-  margin-left: -38px !important;
-  transform: scale(0.5, 0.5);
-  vertical-align: baseline;
-  min-width: 40px;
-  min-height: 40px;
-  max-width: 40px;
-  max-height: 40px;
-  width: 40px;
-  min-height: 40px;
-  border-radius: 100px;
-  border: none;
-  opacity: 0;
-  margin: auto;
-  float: center;
-  transition: all 0.3s ease;
-  z-index: 21;
-}
-
-.butttton.typipi {
-  opacity: 1;
-  background: #3F7AFF;
-  transform: scale(1, 1);
-  display: flow-root;
-  cursor: pointer;
-}
-
-
-.butttton.typipi:hover {
-  background: #1C57DA;
-}
-
-
-.butttton.typipi.nono{
-  background: #1C57DA;
-  display: none;
 }
 
 
@@ -562,6 +502,7 @@ a {
   -webkit-transform: scale(0.5);
   -ms-transform: scale(0.5);
   transform: scale(0.5);
+  mix-blend-mode: multiply;
   opacity: 0.0%;
   margin-top: 25%;
   position: relative;
@@ -594,7 +535,7 @@ a {
 #day {
   margin-top: 100px;
   color: var(--day-color);
-  font-size: 16px;
+  font-size: 17px;
   text-align: center;
   font-weight: 400;
   margin-bottom: 170px;
@@ -696,12 +637,12 @@ a {
 
 
 .box img:hover {
-  -webkit-filter: brightness(70%);
-  -webkit-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  -webkit-transition: all 0.6s ease;
-  -o-transition: all 0.6s ease;
-  transition: all 0.6s ease;
+  -webkit-filter: brightness(90%);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 
@@ -710,23 +651,25 @@ a {
   font-weight: 500;
   color: var(--text-link-colors);
   display: block;
-  width: 150px;
+  width: auto;
+  display: table;
   margin-bottom: 0px;
-
+  margin-top: 12px;
+  cursor: pointer;
 }
 
 .gallery-h:hover {
-  color: #B130FF;
-  -webkit-transition: all 0.35s;
-  -o-transition: all 0.35s;
-  transition: all 0.35s;
+  opacity: 0.6;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .gallery-p {
   font-weight: 400;
   color: var(--text-link-colors);
   opacity: 0.5;
-  margin-top: 3px;
+  margin-top: 4px;
   display: block;
   font-size: 16px;
   ;
@@ -743,9 +686,10 @@ a {
   cursor: pointer;
   line-height: 1;
   margin-left: auto;
-  -webkit-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s;
+  z-index: 1;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
 }
 
 #pdf::after {
@@ -758,9 +702,9 @@ a {
   color: var(--border-color);
   cursor: pointer;
   line-height: 1;
-  -webkit-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
   position: absolute;
 }
 
@@ -948,15 +892,15 @@ a {
   }
 
   40% {
-    -ms-transform: translateY(-30px);
-    -webkit-transform: translateY(-30px);
-    transform: translateY(-30px);
+    -ms-transform: translateY(-9%);
+    -webkit-transform: translateY(-9%);
+    transform: translateY(-9%);
   }
 
   60% {
-    -ms-transform: translateY(-15px);
-    -webkit-transform: translateY(-15px);
-    transform: translateY(-15px);
+    -ms-transform: translateY(-4.5%);
+    -webkit-transform: translateY(-4.5%);
+    transform: translateY(-4.5%);
   }
 }
 
@@ -990,13 +934,15 @@ a {
 }
 
 .arrow {
+  opacity: 0;
+  transition: opacity 0.4s ease;
   position: absolute;
-  top: 92%;
+  top: 91%;
   left: 50%;
-  margin-left: -28px;
+  margin-left: -43px;
   width: 40px;
   height: 40px;
-  font-size: 12px;
+  font-size: 40px;
   padding: 20px;
   z-index: 99;
   background-size: 20px 15px;
@@ -1005,12 +951,13 @@ a {
 }
 
 .nothing{
-    opacity: 0.0;
-}
+    top: 94%;
+    opacity: 0 !important;
+  }
 
 .bounce {
-  -webkit-animation: bounce 2s infinite;
-  animation: bounce 2s infinite;
+  -webkit-animation: bounce 1.75s infinite;
+  animation: bounce 1.75s infinite;
 }
 
 
@@ -1142,9 +1089,9 @@ a {
   --bg-color: black;
   --border-color: #5e5e5e;
   --btn-bg-color-hover: #202020;
-  --btn-border: 1px solid #202020;
+  --btn-border: 1px solid #3f3f3f;
   --location-color: white;
-  --day-color: rgb(201, 201, 201);
+  --day-color: #D6D6D6;
   --left-message-bg-color: #26252a;
   --left-message-color: white;
   --left-svg-fill: #26252a;
@@ -1243,10 +1190,15 @@ a {
 
 @media screen and (max-width: 950px) {
 
+  .button-group{
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
 
-    .arrow{
+  .arrow{
         opacity: 0.0;
-}
+        top: 89%;
+  }
 
   #day {
     margin-top: 10%;
@@ -1262,33 +1214,34 @@ a {
   }
 
   .left {
-    margin-left: 35px;
+    margin-left: 50px;
   }
 
   .right {
-    margin-right: 35px;
+    margin-right: 50px;
   }
 
   .message {
     border-radius: 1.25em;
-    font-size: 16px;
+    padding: 10px 18px;
+    font-size: 17px;
     max-width: 270px;
-    padding: 0.5em 1em;
     line-height: 20px;
   }
 
   .right>svg {
-    right: -12px;
+    right: -13px;
 
   }
 
   .left>svg {
-    left: -12px;
+    left: -13px;
   }
 
   .btn {
-    padding: 7px 10px;
-    font-size: 12.5px;
+    padding: 7px 18px;
+    font-size: 17px;
+    margin: 0 4px;
   }
 
   .gallery-block .box {
@@ -1297,29 +1250,30 @@ a {
   }
 
   .skills {
-    max-width: 270px;
+    margin-left: 4%;
   }
 
   #pdf2::before {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   #pdf2 {
-    font-size: 13px;
+    margin-left: -3px;
+    font-size: 14px;
   }
 
   #pdf::after {
-    font-size: 13px;
+    font-size: 14px;
   }
 
   #pdf {
     text-decoration: none;
-    font-size: 13px;
+    font-size: 14px;
   }
 
   .bigger {
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
   }
 
   .box img {
@@ -1330,6 +1284,10 @@ a {
 
 @media screen and (max-width: 480px) {
 
+  .skills {
+    margin-left: 10%;
+  }
+
   .profile{
     margin-top: 0%;
   }
@@ -1338,17 +1296,13 @@ a {
     margin-top: 25%;
   }
   .left {
-    margin-left: 50px;
+    margin-left: 12px;
   }
 
   .right {
-    margin-right: 50px;
+    margin-right: 12px;
   }
 
-  .btn {
-    padding: 7px 10px;
-    font-size: 14px;
-  }
 
   .showcase {
     display: block; 
