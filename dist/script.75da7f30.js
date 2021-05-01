@@ -978,23 +978,20 @@ var _require = require('*.gif'),
 
 var pace = require('./pace');
 
-pace.start();
+pace.start(); // אנימציות מרגש שנטען
+
 document.querySelector('main').style.display = 'none';
 pace.on('done', function () {
   document.querySelector('main').style.display = 'block';
-  window.scrollTo(0, 50);
+  window.scrollTo(0, 1);
+  setTimeout(function () {
+    $('.arrow').css('opacity', '1');
+  }, 2500);
 });
 window.addEventListener('load', function () {
   var elm = $('[data-src=Whitemoji2]');
   elm[0].setAttribute('src', Whitemoji2);
-}, false); // אנימציות מרגש שנטען
-
-setTimeout(function () {
-  $('.arrow').css('opacity', '1');
-}, 333500);
-setTimeout(function () {
-  window.scrollTo(0, 1);
-}, 1000); // const emergence = require('./emergence.min.js');
+}, false); // const emergence = require('./emergence.min.js');
 
 var e = require('emergence.js');
 
@@ -1818,7 +1815,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55112" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52930" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

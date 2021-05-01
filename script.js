@@ -8,10 +8,14 @@ const pace = require('./pace');
 
 pace.start();
 
+// אנימציות מרגש שנטען
 document.querySelector('main').style.display = 'none';
 pace.on('done', () => {
    document.querySelector('main').style.display = 'block';
-   window.scrollTo(0, 50);
+   window.scrollTo(0, 1);
+   setTimeout(function () {
+        $('.arrow').css('opacity', '1');
+   }, 2500);
 });
 
 window.addEventListener(
@@ -23,15 +27,7 @@ window.addEventListener(
    false
 );
 
-// אנימציות מרגש שנטען
 
-setTimeout(function () {
-   $('.arrow').css('opacity', '1');
-}, 333500);
-
-setTimeout(function () {
-   window.scrollTo(0, 1);
-}, 1000);
 
 
 

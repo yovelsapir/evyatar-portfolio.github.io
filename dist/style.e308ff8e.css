@@ -1290,6 +1290,28 @@ a {
 
 @media screen and (max-width: 480px) {
 
+  #pdf2 {
+    margin-left: 16px;
+  }
+
+  #pdf2::before {
+    content: none;
+  }
+
+  #pdf2:hover {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  #pdf {
+    margin-right: 16px;
+  }
+
+  #pdf::after {
+    content: none;
+  }
+
   .skills {
     margin-left: 10%;
   }
@@ -1309,35 +1331,56 @@ a {
     margin-right: 12px;
   }
 
-
   .showcase {
-    display: block; 
-    flex-direction: vertical;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 150px;
+    display: block;
     white-space: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    width: 100%;
+    margin-top: -30px;
+    min-height: 250px;
   }
 
+
+.showcase-box {
+  display: inline-flex;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+
+ 
   .box.a {
+    margin-left: 30px !important;
     -webkit-transition-delay: 0.3s;
     -o-transition-delay: 0.3s;
     transition-delay: 0.3s;
-    ;
   }
 
   .box.b {
     -webkit-transition-delay: 0.3s;
     -o-transition-delay: 0.3s;
     transition-delay: 0.3s;
-    ;
   }
 
   .box.c {
     -webkit-transition-delay: 0s;
     -o-transition-delay: 0s;
     transition-delay: 0s;
-    ;
   }
 
+  /*.showcase-box:last-child {
+    margin-right: 16px;
+  } */
+
+
   .box {
+    margin-left: 0px;
+    margin-right: 16px;
     -webkit-transform: translateY(0px);
     -ms-transform: translateY(0px);
     transform: translateY(0px);
@@ -1398,11 +1441,12 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 5px;
+  height: 6px;
   width: 200px;
   background: #fff;
-  border: 1px solid #29d;
-  border-radius: 8px;
+  /*border: 1px solid #29d;*/
+  background: #DFDFDF;
+  border-radius: 80px;
   overflow: hidden;
 }
 
@@ -1428,7 +1472,8 @@ a {
   right: 100%;
   height: 100%;
   width: 100%;
-  background:  #29d;
+  background: #2790E3;
+  border-radius: 80px;
 }
 
 .pace.pace-inactive {
