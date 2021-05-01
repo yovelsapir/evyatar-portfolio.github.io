@@ -982,6 +982,7 @@ pace.start();
 document.querySelector('main').style.display = 'none';
 pace.on('done', function () {
   document.querySelector('main').style.display = 'block';
+  window.scrollTo(0, 50);
 });
 window.addEventListener('load', function () {
   var elm = $('[data-src=Whitemoji2]');
@@ -990,7 +991,7 @@ window.addEventListener('load', function () {
 
 setTimeout(function () {
   $('.arrow').css('opacity', '1');
-}, 3500);
+}, 333500);
 setTimeout(function () {
   window.scrollTo(0, 1);
 }, 1000); // const emergence = require('./emergence.min.js');
@@ -1504,7 +1505,7 @@ document.querySelector("#".concat(HOME_GROUP, " .show-me-your-work-btn")).addEve
 
   if (whatYouCanDoButton) {
     whatYouCanDoButton.addEventListener('click', function () {
-      removeButton(smoothAnimationButton);
+      // removeButton(smoothAnimationButton);
       removeButton(whatYouCanDoButton);
       showPage(WHAT_YOU_CAN_DO_GROUP, 2);
       var w_contactInfoButton = createButton('How can I contact you?', '#contact-group', WHAT_YOU_CAN_DO_GROUP);
@@ -1518,34 +1519,31 @@ document.querySelector("#".concat(HOME_GROUP, " .show-me-your-work-btn")).addEve
         });
       }
     });
-  }
+  } // if (smoothAnimationButton) {
+  //    smoothAnimationButton.addEventListener('click', () => {
+  //       removeButton(whatYouCanDoButton);
+  //       removeButton(smoothAnimationButton);
+  //       showPage(SMOOTH_ANIMATION_GROUP, 2);
+  //       createGallery('.gallery-block-smooth-animation');
+  //       const s_whatYouCanDoButton = createButton('What you can do?', '#what-you-can-do-group', SMOOTH_ANIMATION_GROUP);
+  //       if (s_whatYouCanDoButton) {
+  //          s_whatYouCanDoButton.addEventListener('click', () => {
+  //             removeButton(s_whatYouCanDoButton);
+  //             showPage(WHAT_YOU_CAN_DO_GROUP, 3);
+  //             const s_contactInfoButton = createButton('How can I contact you?', '#contact-group', WHAT_YOU_CAN_DO_GROUP);
+  //             if (s_contactInfoButton) {
+  //                s_contactInfoButton.addEventListener('click', () => {
+  //                   removeButton(s_contactInfoButton);
+  //                   showPage(CONTACT_GROUP, 4);
+  //                   $('#confetti').addClass('opa');
+  //                   myFunction123();
+  //                });
+  //             }
+  //          });
+  //       }
+  //    });
+  // }
 
-  if (smoothAnimationButton) {
-    smoothAnimationButton.addEventListener('click', function () {
-      removeButton(whatYouCanDoButton);
-      removeButton(smoothAnimationButton);
-      showPage(SMOOTH_ANIMATION_GROUP, 2);
-      createGallery('.gallery-block-smooth-animation');
-      var s_whatYouCanDoButton = createButton('What you can do?', '#what-you-can-do-group', SMOOTH_ANIMATION_GROUP);
-
-      if (s_whatYouCanDoButton) {
-        s_whatYouCanDoButton.addEventListener('click', function () {
-          removeButton(s_whatYouCanDoButton);
-          showPage(WHAT_YOU_CAN_DO_GROUP, 3);
-          var s_contactInfoButton = createButton('How can I contact you?', '#contact-group', WHAT_YOU_CAN_DO_GROUP);
-
-          if (s_contactInfoButton) {
-            s_contactInfoButton.addEventListener('click', function () {
-              removeButton(s_contactInfoButton);
-              showPage(CONTACT_GROUP, 4);
-              $('#confetti').addClass('opa');
-              myFunction123();
-            });
-          }
-        });
-      }
-    });
-  }
 });
 document.querySelector("#".concat(HOME_GROUP, " .what-you-can-do-btn")).addEventListener('click', function () {
   showPage(WHAT_YOU_CAN_DO_GROUP, 1);
@@ -1820,7 +1818,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52930" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55112" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

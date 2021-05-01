@@ -11,6 +11,7 @@ pace.start();
 document.querySelector('main').style.display = 'none';
 pace.on('done', () => {
    document.querySelector('main').style.display = 'block';
+   window.scrollTo(0, 50);
 });
 
 window.addEventListener(
@@ -26,7 +27,7 @@ window.addEventListener(
 
 setTimeout(function () {
    $('.arrow').css('opacity', '1');
-}, 3500);
+}, 333500);
 
 setTimeout(function () {
    window.scrollTo(0, 1);
@@ -461,7 +462,7 @@ document.querySelector(`#${HOME_GROUP} .show-me-your-work-btn`).addEventListener
 
    if (whatYouCanDoButton) {
       whatYouCanDoButton.addEventListener('click', () => {
-         removeButton(smoothAnimationButton);
+         // removeButton(smoothAnimationButton);
          removeButton(whatYouCanDoButton);
          showPage(WHAT_YOU_CAN_DO_GROUP, 2);
          const w_contactInfoButton = createButton('How can I contact you?', '#contact-group', WHAT_YOU_CAN_DO_GROUP);
@@ -476,31 +477,31 @@ document.querySelector(`#${HOME_GROUP} .show-me-your-work-btn`).addEventListener
       });
    }
 
-   if (smoothAnimationButton) {
-      smoothAnimationButton.addEventListener('click', () => {
-         removeButton(whatYouCanDoButton);
-         removeButton(smoothAnimationButton);
-         showPage(SMOOTH_ANIMATION_GROUP, 2);
-         createGallery('.gallery-block-smooth-animation');
+   // if (smoothAnimationButton) {
+   //    smoothAnimationButton.addEventListener('click', () => {
+   //       removeButton(whatYouCanDoButton);
+   //       removeButton(smoothAnimationButton);
+   //       showPage(SMOOTH_ANIMATION_GROUP, 2);
+   //       createGallery('.gallery-block-smooth-animation');
 
-         const s_whatYouCanDoButton = createButton('What you can do?', '#what-you-can-do-group', SMOOTH_ANIMATION_GROUP);
-         if (s_whatYouCanDoButton) {
-            s_whatYouCanDoButton.addEventListener('click', () => {
-               removeButton(s_whatYouCanDoButton);
-               showPage(WHAT_YOU_CAN_DO_GROUP, 3);
-               const s_contactInfoButton = createButton('How can I contact you?', '#contact-group', WHAT_YOU_CAN_DO_GROUP);
-               if (s_contactInfoButton) {
-                  s_contactInfoButton.addEventListener('click', () => {
-                     removeButton(s_contactInfoButton);
-                     showPage(CONTACT_GROUP, 4);
-                     $('#confetti').addClass('opa');
-                     myFunction123();
-                  });
-               }
-            });
-         }
-      });
-   }
+   //       const s_whatYouCanDoButton = createButton('What you can do?', '#what-you-can-do-group', SMOOTH_ANIMATION_GROUP);
+   //       if (s_whatYouCanDoButton) {
+   //          s_whatYouCanDoButton.addEventListener('click', () => {
+   //             removeButton(s_whatYouCanDoButton);
+   //             showPage(WHAT_YOU_CAN_DO_GROUP, 3);
+   //             const s_contactInfoButton = createButton('How can I contact you?', '#contact-group', WHAT_YOU_CAN_DO_GROUP);
+   //             if (s_contactInfoButton) {
+   //                s_contactInfoButton.addEventListener('click', () => {
+   //                   removeButton(s_contactInfoButton);
+   //                   showPage(CONTACT_GROUP, 4);
+   //                   $('#confetti').addClass('opa');
+   //                   myFunction123();
+   //                });
+   //             }
+   //          });
+   //       }
+   //    });
+   // }
 });
 
 document.querySelector(`#${HOME_GROUP} .what-you-can-do-btn`).addEventListener('click', () => {
