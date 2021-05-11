@@ -14,65 +14,11 @@ body {
   display: none;
 }
 
-
-.secret-password {
-  left: 0 !important;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+#mobhide{
+  display: none;
 }
 
-#gridido{
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  transform: translateX(-52px);
-}
 
-#leftito{
-  width: 250px;  
-  transition: all 0.25s ease;
-}
-
-#leftito.leftitwo{
-   transform: translateX(100px);
-}
-
-#formino{
-  display:flex;
-  flex-direction: row;
-  
-  border: 1px solid #cccfdb;
-  background-color: white;
-  border-radius: 4px;
-  height: 64px;
-  width: 250px;
-  color: black;
-  z-index: 2;
-
-  
-  /* border-radius: 30px; */
-  padding: 0px 25px; 
-  transition: all 0.15s ease;
-}
-
-#formino.wrrngo{
-  background-color: #FEF3F2;
-  border: 1px solid #D44A40;
-}
-
-#formino.typi{
-  border-radius: 40px;
-}
-
-#formino.typi.coloro{
-    border-radius: 30px;
-    border: 1px solid #1C57DA;
-    background: #1C57DA;
-    color: white;
-    width: 150px;
-}
 
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -1195,6 +1141,15 @@ a {
 
 
 @media screen and (max-width: 950px) {
+
+  #mobhide{
+    display: block;
+  }
+
+  #brara{
+    display: none;
+  }
+  
 
   .button-group{
     margin-top: 40px;
