@@ -1552,8 +1552,8 @@ document.querySelector("#".concat(HOME_GROUP, " .what-you-can-do-btn")).addEvent
     // removeButton(smoothAnimationButton);
     removeButton(showMeYourWorkButton);
     showPage(WORK_GROUP, 2);
-    createGallery('.gallery-block-show-me-your-work');
-    var w_smoothAnimationButton = createButton('What about XR?', '#smooth-animation-group', WORK_GROUP);
+    createGallery('.gallery-block-show-me-your-work'); //const w_smoothAnimationButton = createButton('What about XR?', '#smooth-animation-group', WORK_GROUP);
+
     var w_contactInfoButton = createButton('How can I contact you?', '#contact-group', WORK_GROUP);
     w_smoothAnimationButton.addEventListener('click', function () {
       removeButton(w_contactInfoButton);
@@ -1753,7 +1753,7 @@ toggleSwitch.addEventListener('change', switchTheme, false);
 
 var url = new URL(document.URL);
 var company = url.searchParams.get('') || 'you';
-document.getElementById('companyName').textContent = "Hi ".concat(company, " \u270C"); // סקילים
+document.getElementById('companyName').textContent = "Hi ".concat(company, " \u270C\uD83C\uDFFB"); // סקילים
 
 /**
  * inViewport jQuery plugin by Roko C.B.
@@ -1815,7 +1815,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52930" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61717" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

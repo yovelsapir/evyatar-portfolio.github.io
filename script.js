@@ -514,7 +514,7 @@ document.querySelector(`#${HOME_GROUP} .what-you-can-do-btn`).addEventListener('
       showPage(WORK_GROUP, 2);
       createGallery('.gallery-block-show-me-your-work');
 
-      const w_smoothAnimationButton = createButton('What about XR?', '#smooth-animation-group', WORK_GROUP);
+      //const w_smoothAnimationButton = createButton('What about XR?', '#smooth-animation-group', WORK_GROUP);
       const w_contactInfoButton = createButton('How can I contact you?', '#contact-group', WORK_GROUP);
 
       w_smoothAnimationButton.addEventListener('click', () => {
@@ -718,7 +718,7 @@ toggleSwitch.addEventListener('change', switchTheme, false);
  */
 var url = new URL(document.URL);
 var company = url.searchParams.get('') || 'you';
-document.getElementById('companyName').textContent = `Hi ${company} ✌`;
+document.getElementById('companyName').textContent = `Hi ${company} ✌🏻`;
 
 // סקילים
 
