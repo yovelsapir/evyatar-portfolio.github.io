@@ -2,7 +2,7 @@
 
 // טעינת תמונה איטית
 
-const { Whitemoji2, Blackmoji2 } = require('*.gif');
+const { Whitemoji2, Blackmoji2, Whitemoji123 } = require('*.gif');
 
 const pace = require('./pace');
 
@@ -21,8 +21,14 @@ pace.on('done', () => {
 window.addEventListener(
    'load',
    function () {
-      const elm = $('[data-src=Whitemoji2]');
-      elm[0].setAttribute('src', Whitemoji2);
+      if (window.innerWidth > 480){
+         const elm = $('[data-src=Whitemoji2]');
+         elm[0].setAttribute('src', Whitemoji2);
+      }
+      else{
+         const elm = $('[data-src=Whitemoji2]');
+         elm[0].setAttribute('src', Whitemoji123);
+      }
    },
    false
 );

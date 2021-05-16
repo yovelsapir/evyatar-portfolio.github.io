@@ -119,14 +119,17 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"Blackmoji2.gif":[function(require,module,exports) {
 module.exports = "/Blackmoji2.b2376b15.gif";
+},{}],"Whitemoji123.gif":[function(require,module,exports) {
+module.exports = "/Whitemoji123.569e65d7.gif";
 },{}],"Whitemoji2.gif":[function(require,module,exports) {
 module.exports = "/Whitemoji2.6bd312af.gif";
 },{}],"*.gif":[function(require,module,exports) {
 module.exports = {
   "Blackmoji2": require("./Blackmoji2.gif"),
+  "Whitemoji123": require("./Whitemoji123.gif"),
   "Whitemoji2": require("./Whitemoji2.gif")
 };
-},{"./Blackmoji2.gif":"Blackmoji2.gif","./Whitemoji2.gif":"Whitemoji2.gif"}],"pace.js":[function(require,module,exports) {
+},{"./Blackmoji2.gif":"Blackmoji2.gif","./Whitemoji123.gif":"Whitemoji123.gif","./Whitemoji2.gif":"Whitemoji2.gif"}],"pace.js":[function(require,module,exports) {
 var define;
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -974,7 +977,8 @@ var define;
 // טעינת תמונה איטית
 var _require = require('*.gif'),
     Whitemoji2 = _require.Whitemoji2,
-    Blackmoji2 = _require.Blackmoji2;
+    Blackmoji2 = _require.Blackmoji2,
+    Whitemoji123 = _require.Whitemoji123;
 
 var pace = require('./pace');
 
@@ -989,8 +993,14 @@ pace.on('done', function () {
   }, 2500);
 });
 window.addEventListener('load', function () {
-  var elm = $('[data-src=Whitemoji2]');
-  elm[0].setAttribute('src', Whitemoji2);
+  if (window.innerWidth > 480) {
+    var elm = $('[data-src=Whitemoji2]');
+    elm[0].setAttribute('src', Whitemoji2);
+  } else {
+    var _elm = $('[data-src=Whitemoji2]');
+
+    _elm[0].setAttribute('src', Whitemoji123);
+  }
 }, false); // const emergence = require('./emergence.min.js');
 
 var e = require('emergence.js');
@@ -1820,7 +1830,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63622" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62692" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
