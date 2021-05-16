@@ -945,6 +945,10 @@ a {
     height: 150px;
   }
 
+  .box img {
+    max-width: 240px;
+  }
+
 
 
 }
@@ -1307,7 +1311,6 @@ a {
   display: inline-flex;
   -ms-flex-item-align: start;
   align-self: flex-start;
-  width: 270px;
 }
 
  
@@ -1330,9 +1333,9 @@ a {
     transition-delay: 0s;
   }
 
-  /*.showcase-box:last-child {
+  .showcase-box:last-child {
     margin-right: 16px;
-  } */
+  } 
 
 
   .box {
@@ -1341,6 +1344,7 @@ a {
     -webkit-transform: translateY(0px);
     -ms-transform: translateY(0px);
     transform: translateY(0px);
+    margin-right: 0px;
   }
 
   .sliding-background {

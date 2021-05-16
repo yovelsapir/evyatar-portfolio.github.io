@@ -704,10 +704,16 @@ function switchTheme(e) {
       document.documentElement.setAttribute('data-theme', 'dark');
       $('.profile').attr('src', (src = `${Blackmoji2}`));
       $('.profile').css('mix-blend-mode', 'screen');
-   } else {
+      $('.profile').attr('src', (src = `${Blackmoji2}`));
+      $('#imgi1, #imgi2, #imgi3').css('display', 'none');
+      $('#imgi1-dark, #imgi2-dark, #imgi3-dark').css('display', 'block');
+      } 
+      else {
       document.documentElement.setAttribute('data-theme', 'light');
       $('.profile').attr('src', (src = `${Whitemoji2}`));
       $('.profile').css('mix-blend-mode', 'multiply');
+      $('#imgi1, #imgi2, #imgi3').css('display', 'block');
+      $('#imgi1-dark, #imgi2-dark, #imgi3-dark').css('display', 'none');
    }
 }
 
