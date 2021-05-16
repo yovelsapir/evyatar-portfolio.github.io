@@ -1,0 +1,107 @@
+:root {
+  --baltic-sea: #2a2b2e;
+  --black: #000000;
+  --concrete: #f2f3f6;
+  --dune: #383636;
+  --gray: #808080;
+  --log-cabin: #222222;
+  --white: #ffffff;
+
+  --font-size-l: 20px;
+  --font-size-m: 19px;
+  --font-size-s: 18px;
+  --font-size-xl: 24px;
+  --font-size-xs: 16px;
+  --font-size-xxl: 36px;
+  --font-size-xxs: 14px;
+
+  --font-family-inter: "Inter", Helvetica;
+  --font-family-roboto: "Roboto", Helvetica;
+}
+.inter-normal-log-cabin-19px {
+  color: var(--log-cabin);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+.inter-normal-black-18px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+.inter-normal-log-cabin-16px {
+  color: var(--log-cabin);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+.inter-bold-log-cabin-36px {
+  color: var(--log-cabin);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 700;
+}
+.inter-normal-black-16px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+.inter-normal-gray-16px {
+  color: var(--gray);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xs);
+  font-style: italic;
+  font-weight: 400;
+}
+.inter-semi-bold-log-cabin-20px {
+  color: var(--log-cabin);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 600;
+}
+.inter-bold-log-cabin-19px {
+  color: var(--log-cabin);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+}
+.inter-normal-log-cabin-14px {
+  color: var(--log-cabin);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxs);
+  font-style: normal;
+  font-weight: 400;
+}
+.inter-normal-dune-14px {
+  color: var(--dune);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxs);
+  font-style: normal;
+  font-weight: 400;
+}
+.inter-normal-gray-14px {
+  color: var(--gray);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xxs);
+  font-style: italic;
+  font-weight: 400;
+}
+.inter-normal-black-20px {
+  color: var(--black);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}
+
+
+/*# sourceMappingURL=/styleguide.08dd6418.css.map */
