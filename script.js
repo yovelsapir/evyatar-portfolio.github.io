@@ -517,23 +517,23 @@ document.querySelector(`#${HOME_GROUP} .what-you-can-do-btn`).addEventListener('
       //const w_smoothAnimationButton = createButton('What about XR?', '#smooth-animation-group', WORK_GROUP);
       const w_contactInfoButton = createButton('How can I contact you?', '#contact-group', WORK_GROUP);
 
-      w_smoothAnimationButton.addEventListener('click', () => {
-         removeButton(w_contactInfoButton);
-         removeButton(w_smoothAnimationButton);
-         showPage(SMOOTH_ANIMATION_GROUP, 3);
-         createGallery('.gallery-block-smooth-animation');
-         const w_contactInfoButton1 = createButton('How can I contact you?', '#contact-group', SMOOTH_ANIMATION_GROUP);
-         w_contactInfoButton1.addEventListener('click', () => {
-            removeButton(w_contactInfoButton1);
-            showPage(CONTACT_GROUP, 4);
-            $('#confetti').addClass('opa');
-            myFunction123();
-         });
-      });
+      // w_smoothAnimationButton.addEventListener('click', () => {
+      //    removeButton(w_contactInfoButton);
+      //    removeButton(w_smoothAnimationButton);
+      //    showPage(SMOOTH_ANIMATION_GROUP, 3);
+      //    createGallery('.gallery-block-smooth-animation');
+      //    const w_contactInfoButton1 = createButton('How can I contact you?', '#contact-group', SMOOTH_ANIMATION_GROUP);
+      //    w_contactInfoButton1.addEventListener('click', () => {
+      //       removeButton(w_contactInfoButton1);
+      //       showPage(CONTACT_GROUP, 4);
+      //       $('#confetti').addClass('opa');
+      //       myFunction123();
+      //    });
+      // });
 
       w_contactInfoButton.addEventListener('click', () => {
          removeButton(w_contactInfoButton);
-         removeButton(w_smoothAnimationButton);
+         // removeButton(w_smoothAnimationButton);
          showPage(CONTACT_GROUP, 3);
          $('#confetti').addClass('opa');
          myFunction123();
