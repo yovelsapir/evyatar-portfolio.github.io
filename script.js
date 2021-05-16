@@ -16,6 +16,8 @@ pace.on('done', () => {
    setTimeout(function () {
         $('.arrow').css('opacity', '1');
    }, 2500);
+   $('.hiddenclass').css('display', 'block');
+   $('.hiddenclass').css('display', 'none');
 });
 
 window.addEventListener(
@@ -32,6 +34,7 @@ window.addEventListener(
    },
    false
 );
+
 
 
 
