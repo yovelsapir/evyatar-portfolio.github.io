@@ -1254,12 +1254,12 @@ a {
 @media screen and (max-width: 480px) {
 
   .omri{
-    margin-top: 0;
+    margin-top: -80vh;
   }
   
   .omri > *:first-child{
     width: 100%; 
-    height: 0;
+    height: 80vh;
   }
 
   #pdf2 {
