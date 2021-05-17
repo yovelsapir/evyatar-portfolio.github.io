@@ -16,6 +16,7 @@ pace.on('done', () => {
    setTimeout(function () {
         $('.arrow').css('opacity', '1');
    }, 2500);
+   // טעינה של אימוגי שחור
    $('.hiddenclass').css('display', 'block');
    $('.hiddenclass').css('display', 'none');
 });
@@ -30,6 +31,7 @@ window.addEventListener(
       else{
          const elm = $('[data-src=Whitemoji2]');
          elm[0].setAttribute('src', Whitemoji123);
+         $('.hiddenclass').css('display', 'none');
       }
    },
    false
@@ -719,7 +721,12 @@ function switchTheme(e) {
       } 
       else {
       document.documentElement.setAttribute('data-theme', 'light');
-      $('.profile').attr('src', (src = `${Whitemoji2}`));
+      if (window.innerWidth > 480){
+         $('.profile').attr('src', (src = `${Whitemoji2}`));
+      }
+      else{
+         $('.profile').attr('src', (src = `${Whitemoji123}`));
+      }
       $('.profile').css('mix-blend-mode', 'multiply');
       $('#imgi1, #imgi2, #imgi3').css('display', 'block');
       $('#imgi1-dark, #imgi2-dark, #imgi3-dark').css('display', 'none');

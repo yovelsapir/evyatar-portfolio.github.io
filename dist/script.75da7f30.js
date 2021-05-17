@@ -990,7 +990,10 @@ pace.on('done', function () {
   window.scrollTo(0, 1);
   setTimeout(function () {
     $('.arrow').css('opacity', '1');
-  }, 2500);
+  }, 2500); // טעינה של אימוגי שחור
+
+  $('.hiddenclass').css('display', 'block');
+  $('.hiddenclass').css('display', 'none');
 });
 window.addEventListener('load', function () {
   if (window.innerWidth > 480) {
@@ -1000,6 +1003,8 @@ window.addEventListener('load', function () {
     var _elm = $('[data-src=Whitemoji2]');
 
     _elm[0].setAttribute('src', Whitemoji123);
+
+    $('.hiddenclass').css('display', 'none');
   }
 }, false); // const emergence = require('./emergence.min.js');
 
@@ -1754,7 +1759,13 @@ function switchTheme(e) {
     $('#imgi1-dark, #imgi2-dark, #imgi3-dark').css('display', 'block');
   } else {
     document.documentElement.setAttribute('data-theme', 'light');
-    $('.profile').attr('src', src = "".concat(Whitemoji2));
+
+    if (window.innerWidth > 480) {
+      $('.profile').attr('src', src = "".concat(Whitemoji2));
+    } else {
+      $('.profile').attr('src', src = "".concat(Whitemoji123));
+    }
+
     $('.profile').css('mix-blend-mode', 'multiply');
     $('#imgi1, #imgi2, #imgi3').css('display', 'block');
     $('#imgi1-dark, #imgi2-dark, #imgi3-dark').css('display', 'none');
@@ -1830,7 +1841,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62692" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57028" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

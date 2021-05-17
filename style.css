@@ -19,8 +19,6 @@ body {
 }
 
 
-
-
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
      transform: translateX(-2px);
 }
@@ -96,8 +94,6 @@ body {
     scrollbar-color: var(--day-color) var(--text-link-colors);
   }
 */
-
-
 
 .hiddenclass {
   display: none;
@@ -209,6 +205,14 @@ a {
 
 }
 
+.omri{
+  margin-top: -90vh;
+}
+
+.omri > *:first-child{
+  width: 100%; 
+  height: 90vh;
+}
 
 .group {
   display: -webkit-box;
@@ -1150,7 +1154,7 @@ a {
     display: block;
   }
 
-  #brara{
+  .my-works.message-block.left > *:last-child{
     display: none;
   }
   
@@ -1248,6 +1252,15 @@ a {
 
 
 @media screen and (max-width: 480px) {
+
+  .omri{
+    margin-top: 0;
+  }
+  
+  .omri > *:first-child{
+    width: 100%; 
+    height: 0;
+  }
 
   #pdf2 {
     margin-left: 16px;
