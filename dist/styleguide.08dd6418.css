@@ -32,13 +32,6 @@
   font-style: normal;
   font-weight: 400;
 }
-.inter-normal-log-cabin-16px {
-  color: var(--log-cabin);
-  font-family: var(--font-family-inter);
-  font-size: var(--font-size-xs);
-  font-style: normal;
-  font-weight: 400;
-}
 .inter-bold-log-cabin-36px {
   color: var(--log-cabin);
   font-family: var(--font-family-inter);
@@ -67,13 +60,6 @@
   font-style: normal;
   font-weight: 600;
 }
-.inter-bold-log-cabin-19px {
-  color: var(--log-cabin);
-  font-family: var(--font-family-inter);
-  font-size: var(--font-size-m);
-  font-style: normal;
-  font-weight: 700;
-}
 .inter-normal-log-cabin-14px {
   color: var(--log-cabin);
   font-family: var(--font-family-inter);
@@ -85,6 +71,13 @@
   color: var(--dune);
   font-family: var(--font-family-inter);
   font-size: var(--font-size-xxs);
+  font-style: normal;
+  font-weight: 400;
+}
+.inter-normal-log-cabin-16px {
+  color: var(--log-cabin);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-xs);
   font-style: normal;
   font-weight: 400;
 }
