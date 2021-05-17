@@ -957,6 +957,12 @@ a {
 
 }
 
+/*solving iphone 11 image bag*/
+@media only screen and (min-width: 414px) and (max-width: 430px) {
+  #topopo{
+    margin-top: 22% !important;
+  }
+}
 
 
 @media only screen and (min-width: 1440px) {
