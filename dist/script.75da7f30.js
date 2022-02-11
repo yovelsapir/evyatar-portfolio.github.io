@@ -1777,9 +1777,21 @@ toggleSwitch.addEventListener('change', switchTheme, false);
  * Create the routing function for different comapnies
  */
 
-var url = new URL(document.URL);
-var company = url.searchParams.get('') || 'you';
-document.getElementById('companyName').textContent = "Hi ".concat(company, " \u270C\uD83C\uDFFB"); // סקילים
+var url = new URL(window.location.href);
+var params = new URLSearchParams(url.search);
+var _ref = [params.get('name'), params.get("secret")],
+    name = _ref[0],
+    secret = _ref[1];
+var company = name || 'you';
+document.getElementById('companyName').textContent = "Hi ".concat(company, " \u270C\uD83C\uDFFB");
+
+if (secret === "secret") {
+  var myWorksSecretElement = document.getElementById("showcase-my-works-secret");
+  myWorksSecretElement.style.display = "flex";
+} else {
+  var myWorksElement = document.getElementById("showcase-my-works");
+  myWorksElement.style.display = "flex";
+} // סקילים
 
 /**
  * inViewport jQuery plugin by Roko C.B.
@@ -1788,6 +1800,7 @@ document.getElementById('companyName').textContent = "Hi ".concat(company, " \u2
  * the current amount of px an element is visible in viewport
  * (The min returned value is 0 (element outside of viewport)
  */
+
 
 (function ($, win) {
   $.fn.inViewport = function (cb) {
@@ -1841,7 +1854,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55118" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53235" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

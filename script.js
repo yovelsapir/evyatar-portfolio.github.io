@@ -738,10 +738,25 @@ toggleSwitch.addEventListener('change', switchTheme, false);
 /**
  * Create the routing function for different comapnies
  */
-var url = new URL(document.URL);
-var company = url.searchParams.get('') || 'you';
+
+const url = new URL(window.location.href);
+const params = new URLSearchParams(url.search);
+const [name, secret] = [
+   params.get('name'), 
+   params.get("secret")
+];
+
+var company = name || 'you';
 document.getElementById('companyName').textContent = `Hi ${company} ✌🏻`;
 
+
+if(secret === "secret") {
+   const myWorksSecretElement = document.getElementById("showcase-my-works-secret");
+   myWorksSecretElement.style.display = "flex";
+} else {
+   const myWorksElement = document.getElementById("showcase-my-works");
+   myWorksElement.style.display = "flex";
+}
 // סקילים
 
 /**

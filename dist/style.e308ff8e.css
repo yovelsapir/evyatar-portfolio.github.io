@@ -19,6 +19,10 @@ body {
 }
 
 
+#showcase-my-works, #showcase-my-works-secret{
+  display: none;
+}
+
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
      transform: translateX(-2px);
 }
