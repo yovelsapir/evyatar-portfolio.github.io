@@ -1786,6 +1786,7 @@ var company = name || 'you';
 document.getElementById('companyName').textContent = "Hi ".concat(company, " \u270C\uD83C\uDFFB");
 
 if (secret === "secret") {
+  // change to a real value
   var myWorksSecretElement = document.getElementById("showcase-my-works-secret");
   myWorksSecretElement.style.display = "flex";
 } else {
@@ -1854,7 +1855,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53235" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51798" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

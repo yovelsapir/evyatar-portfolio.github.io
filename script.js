@@ -750,7 +750,7 @@ var company = name || 'you';
 document.getElementById('companyName').textContent = `Hi ${company} ✌🏻`;
 
 
-if(secret === "secret") {
+if(secret === "secret") { // change to a real value
    const myWorksSecretElement = document.getElementById("showcase-my-works-secret");
    myWorksSecretElement.style.display = "flex";
 } else {
