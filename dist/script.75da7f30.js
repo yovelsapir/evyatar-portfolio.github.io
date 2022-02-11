@@ -131,7 +131,7 @@ module.exports = {
 };
 },{"./Blackmoji2.gif":"Blackmoji2.gif","./Whitemoji123.gif":"Whitemoji123.gif","./Whitemoji2.gif":"Whitemoji2.gif"}],"pace.js":[function(require,module,exports) {
 var define;
-function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
 /*! pace 1.0.0 */
 (function () {
@@ -1841,7 +1841,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50596" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55118" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
