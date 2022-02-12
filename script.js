@@ -741,16 +741,16 @@ toggleSwitch.addEventListener('change', switchTheme, false);
 
 const url = new URL(window.location.href);
 const params = new URLSearchParams(url.search);
-const [name, secret] = [
+const [name, code] = [
    params.get('name'), 
-   params.get("secret")
+   params.get("code")
 ];
 
 var company = name || 'you';
 document.getElementById('companyName').textContent = `Hi ${company} ✌🏻`;
 
 
-if(secret === "secret") { // change to a real value
+if(code === "open-sesame") { // change to a real value
    const myWorksSecretElement = document.getElementById("showcase-my-works-secret");
    myWorksSecretElement.style.display = "flex";
 } else {
