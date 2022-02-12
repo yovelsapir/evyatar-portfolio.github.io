@@ -92,6 +92,19 @@ p{
   color: var(--secondary-text-color);
 }
 
+a{
+  font-size: 18px;
+  line-height: 29px;
+  color: var(--secondary-text-color);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a:hover{
+  color: var(--white-black);
+}
+
+
 img{
   width: 820px;
   margin-top: 40px;
