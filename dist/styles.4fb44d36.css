@@ -43,6 +43,17 @@ html{
   margin-top: 0px;
 }
 
+ul
+{
+  padding-left: 20px;
+  margin-top: 20px;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 29px;
+  color: var(--secondary-text-color);
+}
+
+
 #page_content{
   width: 820px;
   margin: auto;
