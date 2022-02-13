@@ -126,10 +126,10 @@ module.exports = "/Whitemoji123.569e65d7.gif";
 },{}],"*.gif":[function(require,module,exports) {
 module.exports = {
   "Blackmoji2": require("./Blackmoji2.gif"),
-  "Whitemoji123": require("./Whitemoji123.gif"),
-  "Whitemoji2": require("./Whitemoji2.gif")
+  "Whitemoji2": require("./Whitemoji2.gif"),
+  "Whitemoji123": require("./Whitemoji123.gif")
 };
-},{"./Blackmoji2.gif":"Blackmoji2.gif","./Whitemoji123.gif":"Whitemoji123.gif","./Whitemoji2.gif":"Whitemoji2.gif"}],"pace.js":[function(require,module,exports) {
+},{"./Blackmoji2.gif":"Blackmoji2.gif","./Whitemoji2.gif":"Whitemoji2.gif","./Whitemoji123.gif":"Whitemoji123.gif"}],"pace.js":[function(require,module,exports) {
 var define;
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
