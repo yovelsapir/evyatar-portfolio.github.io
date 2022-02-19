@@ -968,6 +968,34 @@ a {
   }
 }
 
+/*solving desktop 2k bag*/
+@media only screen and (min-height: 1150px) and (max-height: 1200px) {
+  #topopo{
+    margin-top: 4% !important;
+  }
+}
+/*solving desktop 2k bag*/
+@media only screen and (min-height: 1201px) and (max-height: 1260px) {
+  #topopo{
+    margin-top: 6% !important;
+  }
+}
+
+/*solving desktop 2k bag*/
+@media only screen and (min-height: 1261px) and (max-height: 1300px) {
+  #topopo{
+    margin-top: 8% !important;
+  }
+}
+
+/*hand emoji foe huge screens*/
+@media only screen and (min-height: 1300px){
+  .arrow{
+    top: 85%;
+  }
+}
+
+
 
 @media only screen and (min-width: 1440px) {
 
@@ -1316,17 +1344,20 @@ a {
   .showcase {
     justify-content: center;
     align-items: center;
-    width: 200px;
-    height: 280px;
-    display: block;
+    width: 10px;
+    height: 300px;
     white-space: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
+    padding-left: 430px;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    width: 100%;
     margin-top: -30px;
     min-height: 250px;
+  }
+
+  .box img {
+    max-width: 265px;
   }
 
 

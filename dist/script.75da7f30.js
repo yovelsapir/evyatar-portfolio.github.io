@@ -119,17 +119,17 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"Blackmoji2.gif":[function(require,module,exports) {
 module.exports = "/Blackmoji2.b2376b15.gif";
-},{}],"Whitemoji2.gif":[function(require,module,exports) {
-module.exports = "/Whitemoji2.6bd312af.gif";
 },{}],"Whitemoji123.gif":[function(require,module,exports) {
 module.exports = "/Whitemoji123.569e65d7.gif";
+},{}],"Whitemoji2.gif":[function(require,module,exports) {
+module.exports = "/Whitemoji2.6bd312af.gif";
 },{}],"*.gif":[function(require,module,exports) {
 module.exports = {
   "Blackmoji2": require("./Blackmoji2.gif"),
-  "Whitemoji2": require("./Whitemoji2.gif"),
-  "Whitemoji123": require("./Whitemoji123.gif")
+  "Whitemoji123": require("./Whitemoji123.gif"),
+  "Whitemoji2": require("./Whitemoji2.gif")
 };
-},{"./Blackmoji2.gif":"Blackmoji2.gif","./Whitemoji2.gif":"Whitemoji2.gif","./Whitemoji123.gif":"Whitemoji123.gif"}],"pace.js":[function(require,module,exports) {
+},{"./Blackmoji2.gif":"Blackmoji2.gif","./Whitemoji123.gif":"Whitemoji123.gif","./Whitemoji2.gif":"Whitemoji2.gif"}],"pace.js":[function(require,module,exports) {
 var define;
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 
@@ -1855,7 +1855,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49605" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49327" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
